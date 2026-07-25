@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Gallery | Dr. Santanu Das</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Animation -->
+    <div class="background-animation">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+    </div>
+
+    <!-- Header & Navigation Trigger -->
+    <header>
+        <a href="index.html" style="text-decoration: none;">
+            <h1 class="logo">Dr. Santanu Das</h1>
+        </a>
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <!-- Floating Back Button -->
+    <a href="#" onclick="history.back(); return false;" class="floating-back-btn" title="Go Back">&#8592;</a>
+
+    <!-- Glassmorphism Dropdown Menu (Slides down from above) -->
+   <!-- Dropdown Menu with Sub-Menu & Tooltips -->
+    <nav class="dropdown-menu" id="dropdown-menu">
+        <ul class="menu-list">
+            
+            <li class="menu-item tooltip-container">
+                <a href="index.html" class="menu-link">Home</a>
+                <span class="hover-tooltip">Return to the main homepage</span>
+            </li>
+            
+            <li class="menu-item tooltip-container has-submenu">
+                <div class="menu-link submenu-toggle" id="about-toggle">About Dr. Das <span class="arrow">▼</span></div>
+                <span class="hover-tooltip">Doctor profile, expertise & education</span>
+                <ul class="submenu" id="about-submenu">
+                    <li><a href="profile.html#expertise">Core Expertise</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-item tooltip-container">
+                <a href="conditions-treatment.html" class="menu-link">Conditions & Treatments</a>
+                <span class="hover-tooltip">Detailed medical info & recovery timelines</span>
+            </li>
+            
+            <li class="menu-item tooltip-container">
+                <a href="media-press.html" class="menu-link">Media & Press</a>
+                <span class="hover-tooltip">Latest updates and published stories</span>
+            </li>
+            
+            <li class="menu-item tooltip-container">
+                <a href="gallery.html" class="menu-link">Clinical Gallery</a>
+                <span class="hover-tooltip">View our state-of-the-art facilities</span>
+            </li>
+            
+            <li class="menu-item tooltip-container">
+                <a href="contact.html" class="menu-link">Contact</a>
+                <span class="hover-tooltip">Clinic address and consultation booking</span>
+            </li>
+            
+        </ul>
+    </nav>
+
+    <!-- Main Content (Dynamically slides down when menu opens) -->
+    <main id="main-content">
+        
+        <!-- Page Header -->
+        <section style="padding-top: 100px; text-align: center; padding-bottom: 2rem;">
+            <h2 class="section-title" style="margin-bottom: 1rem;">Clinical Gallery</h2>
+            <p style="max-width: 800px; margin: 0 auto; color: var(--text-light); font-size: 1.1rem; padding: 0 5%;">
+                Take a look inside our state-of-the-art clinic, advanced surgical facilities, and dedicated patient care areas designed for your comfort and safety.
+            </p>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section style="padding: 2rem 5% 6rem;">
+            <div class="grid-container">
+                
+                <!-- Gallery Item 1 -->
+                <div class="glass-card" style="padding: 1rem; text-align: center; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="https://via.placeholder.com/600x400/e2e8f0/0d2a4a?text=Consultation+Room" alt="Consultation Room" style="width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;">
+                    <h3 style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 0; border: none; padding-bottom: 0;">Consultation Room</h3>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="glass-card" style="padding: 1rem; text-align: center; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="https://via.placeholder.com/600x400/e2e8f0/0d2a4a?text=Operating+Theater" alt="Operating Theater" style="width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;">
+                    <h3 style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 0; border: none; padding-bottom: 0;">Operating Theater</h3>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="glass-card" style="padding: 1rem; text-align: center; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="https://via.placeholder.com/600x400/e2e8f0/0d2a4a?text=Patient+Lounge" alt="Patient Lounge" style="width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;">
+                    <h3 style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 0; border: none; padding-bottom: 0;">Waiting Lounge</h3>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="glass-card" style="padding: 1rem; text-align: center; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="https://via.placeholder.com/600x400/e2e8f0/0d2a4a?text=Diagnostic+Equipment" alt="Diagnostic Equipment" style="width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;">
+                    <h3 style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 0; border: none; padding-bottom: 0;">Advanced Diagnostics</h3>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="glass-card" style="padding: 1rem; text-align: center; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="https://via.placeholder.com/600x400/e2e8f0/0d2a4a?text=Recovery+Suite" alt="Recovery Suite" style="width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;">
+                    <h3 style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 0; border: none; padding-bottom: 0;">Post-Op Recovery Suite</h3>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="glass-card" style="padding: 1rem; text-align: center; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="https://via.placeholder.com/600x400/e2e8f0/0d2a4a?text=Exterior+View" alt="Exterior View" style="width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;">
+                    <h3 style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 0; border: none; padding-bottom: 0;">Clinic Exterior</h3>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Connects to your animation logic -->
+    <script src="script.js"></script>
+</body>
+</html>

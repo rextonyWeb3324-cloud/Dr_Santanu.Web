@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media & Press | Dr. Santanu Das</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Animation -->
+    <div class="background-animation">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+    </div>
+
+    <!-- Header & Navigation Trigger -->
+    <header>
+        <a href="index.html" style="text-decoration: none;">
+            <h1 class="logo">Dr. Santanu Das</h1>
+        </a>
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <!-- Floating Back Button -->
+    <a href="#" onclick="history.back(); return false;" class="floating-back-btn" title="Go Back">&#8592;</a>
+
+    <!-- Glassmorphism Dropdown Menu (Slides down from above) -->
+    <!-- Dropdown Menu with Sub-Menu & Tooltips -->
+    <nav class="dropdown-menu" id="dropdown-menu">
+        <ul class="menu-list">
+            
+            <li class="menu-item tooltip-container">
+                <a href="index.html" class="menu-link">Home</a>
+                <span class="hover-tooltip">Return to the main homepage</span>
+            </li>
+            
+            <li class="menu-item tooltip-container has-submenu">
+                <div class="menu-link submenu-toggle" id="about-toggle">About Dr. Das <span class="arrow">▼</span></div>
+                <span class="hover-tooltip">Doctor profile, expertise & education</span>
+                <ul class="submenu" id="about-submenu">
+                    <li><a href="profile.html#expertise">Core Expertise</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-item tooltip-container">
+                <a href="conditions-treatment.html" class="menu-link">Conditions & Treatments</a>
+                <span class="hover-tooltip">Detailed medical info & recovery timelines</span>
+            </li>
+            
+            <li class="menu-item tooltip-container">
+                <a href="media-press.html" class="menu-link">Media & Press</a>
+                <span class="hover-tooltip">Latest updates and published stories</span>
+            </li>
+            
+            <li class="menu-item tooltip-container">
+                <a href="gallery.html" class="menu-link">Clinical Gallery</a>
+                <span class="hover-tooltip">View our state-of-the-art facilities</span>
+            </li>
+            
+            <li class="menu-item tooltip-container">
+                <a href="contact.html" class="menu-link">Contact</a>
+                <span class="hover-tooltip">Clinic address and consultation booking</span>
+            </li>
+            
+        </ul>
+    </nav>
+
+    <!-- Main Content (Dynamically slides down when menu opens) -->
+    <main id="main-content">
+        
+        <!-- Page Header -->
+        <section style="padding-top: 100px; text-align: center; padding-bottom: 2rem;">
+            <h2 class="section-title" style="margin-bottom: 1rem;">Media & Press Updates</h2>
+            <p style="max-width: 800px; margin: 0 auto; color: var(--text-light); font-size: 1.1rem; padding: 0 5%;">
+                Stay up to date with Dr. Santanu Das's latest clinical advancements, research publications, featured success stories, and speaking engagements.
+            </p>
+        </section>
+
+        <!-- Media & Press Grid -->
+        <section style="padding: 2rem 5% 6rem;">
+            <div class="grid-container">
+                
+                <!-- Article 1 -->
+                <article class="info-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <span class="surgery-tag" style="background: var(--primary-color); color: white; margin-bottom: 1rem;">June 2026</span>
+                        <h3 style="margin-top: 1rem; font-size: 1.4rem;">Keynote Speaker: National Oculoplasty Summit</h3>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">Dr. Das presented groundbreaking techniques in scarless Endoscopic DCR at the annual summit, sharing insights on minimally invasive tear duct surgery with over 500 attending specialists.</p>
+                    </div>
+                    <a href="#" style="color: var(--secondary-color); text-decoration: none; font-weight: bold;">Read Full Feature &rarr;</a>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="info-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <span class="surgery-tag" style="background: var(--primary-color); color: white; margin-bottom: 1rem;">April 2026</span>
+                        <h3 style="margin-top: 1rem; font-size: 1.4rem;">Published Research: Advancements in Orbital Trauma</h3>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">A new peer-reviewed paper co-authored by Dr. Das has been published in the <em>Journal of Ophthalmic Surgery</em>, detailing a new protocol for customized titanium plate reconstruction following severe blowout fractures.</p>
+                    </div>
+                    <a href="#" style="color: var(--secondary-color); text-decoration: none; font-weight: bold;">View Publication &rarr;</a>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="info-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <span class="surgery-tag" style="background: var(--primary-color); color: white; margin-bottom: 1rem;">February 2026</span>
+                        <h3 style="margin-top: 1rem; font-size: 1.4rem;">Success Story: Restoring Vision After Eyelid Oncology</h3>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">Local news outlet featured a heartwarming patient success story highlighting Dr. Das's successful excision and aesthetic reconstruction of a complex basal cell carcinoma on a 62-year-old patient.</p>
+                    </div>
+                    <a href="#" style="color: var(--secondary-color); text-decoration: none; font-weight: bold;">Watch Interview &rarr;</a>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="info-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <span class="surgery-tag" style="background: var(--primary-color); color: white; margin-bottom: 1rem;">November 2025</span>
+                        <h3 style="margin-top: 1rem; font-size: 1.4rem;">Workshop: Non-Surgical Facial Rejuvenation</h3>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">Dr. Das hosted an intensive hands-on clinical workshop demonstrating the safe application of Botox and dermal fillers around the delicate periocular region to achieve natural aesthetic harmony.</p>
+                    </div>
+                    <a href="#" style="color: var(--secondary-color); text-decoration: none; font-weight: bold;">View Event Gallery &rarr;</a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Uses your existing script -->
+    <script src="script.js"></script>
+</body>
+</html>

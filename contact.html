@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Booking | Dr. Santanu Das</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Adding a tiny bit of specific style just for the form inputs -->
+    <style>
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 8px;
+            font-family: var(--font-main);
+            font-size: 1rem;
+            background: rgba(255,255,255,0.8);
+            transition: border-color 0.3s;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Animation -->
+    <div class="background-animation">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+    </div>
+
+    <!-- Header & Navigation Trigger -->
+    <header>
+        <a href="index.html" style="text-decoration: none;">
+            <h1 class="logo">Dr. Santanu Das</h1>
+        </a>
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <!-- Floating Back Button -->
+    <a href="#" onclick="history.back(); return false;" class="floating-back-btn" title="Go Back">&#8592;</a>
+
+    <!-- Glassmorphism Dropdown Menu (Slides down from above) -->
+   <!-- Dropdown Menu with Sub-Menu & Tooltips -->
+    <nav class="dropdown-menu" id="dropdown-menu">
+        <ul class="menu-list">
+            
+            <li class="menu-item tooltip-container">
+                <a href="index.html" class="menu-link">Home</a>
+                <span class="hover-tooltip">Return to the main homepage</span>
+            </li>
+            
+            <li class="menu-item tooltip-container has-submenu">
+                <div class="menu-link submenu-toggle" id="about-toggle">About Dr. Das <span class="arrow">▼</span></div>
+                <span class="hover-tooltip">Doctor profile, expertise & education</span>
+                <ul class="submenu" id="about-submenu">
+                    <li><a href="profile.html#expertise">Core Expertise</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-item tooltip-container">
+                <a href="conditions-treatment.html" class="menu-link">Conditions & Treatments</a>
+                <span class="hover-tooltip">Detailed medical info & recovery timelines</span>
+            </li>
+            
+            <li class="menu-item tooltip-container">
+                <a href="media-press.html" class="menu-link">Media & Press</a>
+                <span class="hover-tooltip">Latest updates and published stories</span>
+            </li>
+            
+            <li class="menu-item tooltip-container">
+                <a href="gallery.html" class="menu-link">Clinical Gallery</a>
+                <span class="hover-tooltip">View our state-of-the-art facilities</span>
+            </li>
+            
+            <li class="menu-item tooltip-container">
+                <a href="contact.html" class="menu-link">Contact</a>
+                <span class="hover-tooltip">Clinic address and consultation booking</span>
+            </li>
+            
+        </ul>
+    </nav>
+    <!-- Main Content (Dynamically slides down when menu opens) -->
+    <main id="main-content">
+        
+        <!-- Page Header -->
+        <section style="padding-top: 100px; text-align: center; padding-bottom: 2rem;">
+            <h2 class="section-title" style="margin-bottom: 1rem;">Contact & Consultation</h2>
+            <p style="max-width: 800px; margin: 0 auto; color: var(--text-light); font-size: 1.1rem; padding: 0 5%;">
+                Ready to restore your vision and aesthetic harmony? Reach out to our team to schedule your personalized consultation with Dr. Santanu Das.
+            </p>
+        </section>
+
+        <!-- Contact Split Layout -->
+        <section class="split-section" style="padding-top: 2rem;">
+            
+            <!-- Left Side: Clinic Info -->
+            <div style="padding-right: 2rem;">
+                <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1.5rem;">Clinic Information</h3>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="font-size: 1.2rem; color: var(--secondary-color); margin-bottom: 0.5rem;">Address</h4>
+                    <p style="font-size: 1.1rem; line-height: 1.6;">123 Medical Plaza, Suite 400<br>Health Avenue<br>City, State, ZIP Code</p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="font-size: 1.2rem; color: var(--secondary-color); margin-bottom: 0.5rem;">Contact Details</h4>
+                    <p style="font-size: 1.1rem; line-height: 1.6;"><strong>Phone:</strong> +1 (234) 567-8900<br><strong>Email:</strong> appointments@drsantanudas.com</p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="font-size: 1.2rem; color: var(--secondary-color); margin-bottom: 0.5rem;">Operating Hours</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 1.1rem; line-height: 1.6;">
+                        <li><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</li>
+                        <li><strong>Saturday:</strong> 10:00 AM - 2:00 PM</li>
+                        <li><strong>Sunday:</strong> Closed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Side: Booking Form -->
+            <div class="glass-card">
+                <h3 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 1.5rem;">Request an Appointment</h3>
+                
+                <form action="#" method="POST">
+                    <input type="text" class="form-input" placeholder="Full Name" required>
+                    
+                    <div style="display: flex; gap: 1rem;">
+                        <input type="email" class="form-input" placeholder="Email Address" required>
+                        <input type="tel" class="form-input" placeholder="Phone Number" required>
+                    </div>
+
+                    <select class="form-input" required style="color: var(--text-dark);">
+                        <option value="" disabled selected>Primary Concern / Condition</option>
+                        <option value="ptosis">Ptosis (Drooping Eyelids)</option>
+                        <option value="lacrimal">Blocked Tear Duct / Watering Eyes</option>
+                        <option value="trauma">Orbital Trauma / Fracture</option>
+                        <option value="tumor">Eyelid Tumor / Lesion</option>
+                        <option value="aesthetics">Aesthetic Consultation (Blepharoplasty)</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <textarea class="form-input" rows="4" placeholder="Briefly describe your symptoms or inquiry..." required></textarea>
+                    
+                    <button type="submit" class="animated-btn" style="width: 100%; border-radius: 8px;">Book Consultation</button>
+                </form>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Connects to your animation logic -->
+    <script src="script.js"></script>
+</body>
+</html>

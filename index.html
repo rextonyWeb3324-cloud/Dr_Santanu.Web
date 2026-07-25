@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Santanu Das | Oculoplastic Surgeon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="homepage">
+
+    <!-- Background Animation -->
+    <div class="background-animation">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html" style="text-decoration: none;">
+            <h1 class="logo">Dr. Santanu Das</h1>
+        </a>
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+    
+   
+
+    <!-- Dropdown Menu with Sub-Menu & Tooltips -->
+    <nav class="dropdown-menu" id="dropdown-menu">
+        <ul class="menu-list">
+            
+            <li class="menu-item tooltip-container">
+                <a href="index.html" class="menu-link" style="color: var(--secondary-color);">Home</a>
+                <span class="hover-tooltip">Return to the main homepage</span>
+            </li>
+            
+            <li class="menu-item tooltip-container has-submenu">
+                <div class="menu-link submenu-toggle" id="about-toggle">About Dr. Das <span class="arrow">▼</span></div>
+                <span class="hover-tooltip">Doctor profile, expertise & education</span>
+                <ul class="submenu" id="about-submenu">
+                    <li><a href="profile.html#expertise">Core Expertise</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-item tooltip-container">
+                <a href="conditions-treatment.html" class="menu-link">Conditions & Treatments</a>
+                <span class="hover-tooltip">Detailed medical info & recovery timelines</span>
+            </li>
+            
+            <li class="menu-item tooltip-container">
+                <a href="media-press.html" class="menu-link">Media & Press</a>
+                <span class="hover-tooltip">Latest updates and published stories</span>
+            </li>
+            
+            <li class="menu-item tooltip-container">
+                <a href="gallery.html" class="menu-link">Clinical Gallery</a>
+                <span class="hover-tooltip">View our state-of-the-art facilities</span>
+            </li>
+            
+            <li class="menu-item tooltip-container">
+                <a href="contact.html" class="menu-link">Contact</a>
+                <span class="hover-tooltip">Clinic address and consultation booking</span>
+            </li>
+            
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        
+        <!-- 1. DOCTOR ABOUT & HERO -->
+        <section id="about" class="hero-section">
+            <div class="hero-image-container">
+                <div class="creative-frame">
+                    <div class="bg-shape shape-primary"></div>
+                    <div class="bg-shape shape-secondary"></div>
+                    <img src="santanu-das.png" alt="Dr. Santanu Das" class="hero-portrait-layered">
+                </div>
+            </div>
+            
+            <div class="hero-text" style="text-align: left;">
+                <h2>Dr. Santanu Das</h2>
+                <h3 class="subtitle" style="color: var(--secondary-color); font-weight: bold; font-size: 1.2rem; margin-bottom: 1.5rem;">
+                    Orbit, Ophthalmic Plastic and Reconstructive Surgeon
+                </h3>
+                
+                <p style="margin-bottom: 1rem;">Hello everyone, I am Dr Santanu Das, an internationally trained orbit, ophthalmic plastic and reconstructive surgeon currently based in New Delhi, India.</p>
+                
+                <p style="margin-bottom: 1rem;">I have done my medical studies (MBBS and MS in Ophthalmology) from Kempegowda Institute of Medical Sciences, Bangalore followed by a clinical fellowship in Orbit and Oculoplasty from one of the best eye hospitals in India, Sankara Eye Hospital, Bangalore.</p>
+                
+                <p style="margin-bottom: 2rem;">Later on, to enhance my expertise in advanced oculoplastic and reconstructive procedures I did an international fellowship from Siriraj Hospital Bangkok, a high volume tertiary care centre in Thailand. Having accumulated considerable knowledge and a deep understanding of ophthalmic plastic and reconstructive surgery, my endeavour is to provide the best possible treatment and guidance to my patients through a holistic approach.</p>
+                
+                <button class="animated-btn" onclick="document.getElementById('what-is-oculoplasty').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+            </div>
+        </section>
+
+        <!-- 2. WHAT IS OCULOPLASTY? -->
+        <section id="what-is-oculoplasty" style="padding: 4rem 5%; max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">What is Ophthalmic plastic and reconstructive surgery?</h2>
+            
+            <p style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 2.5rem;">
+                Ophthalmic plastic and reconstructive surgery also known as Oculoplasty is a sub-speciality of Ophthalmology which deals with the diseases of eyelid, eyebrows, lacrimal gland, tear drainage pathway and the bony orbit. From enhancing cosmesis, restoring confidence and vision to achieving normal functional outcomes via extensive reconstructive surgeries using implants, grafts etc, an oculoplastic surgeon can do it all.
+            </p>
+
+            <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 1.5rem;">Commonly Performed Procedures:</h3>
+            
+            <ul class="step-list">
+                <li><strong>Lid abnormalities:</strong> Correcting conditions like ptosis, entropion, ectropion, and retraction.</li>
+                <li><strong>Socket reconstruction:</strong> Utilizing fat grafts, ball implants and prosthetic eyes.</li>
+                <li><strong>Oculofacial reconstructions:</strong> Comprehensive repair following trauma and tumor removal.</li>
+                <li><strong>Orbital surgery:</strong> Orbital fracture repair and tumor removal.</li>
+                <li><strong>Thyroid Eye Disease:</strong> Rehabilitative surgeries and medical treatment.</li>
+                <li><strong>Multidisciplinary treatments:</strong> Acting as a core part of a multidisciplinary team for treating complex orbital and facial abnormalities.</li>
+                <li><strong>Cosmetic procedures:</strong> Aesthetic enhancements including Blepharoplasty, Brow lift, Botox, etc.</li>
+            </ul>
+        </section>
+
+        <!-- 3. EDUCATIONAL QUALIFICATIONS -->
+        <section id="education-home" style="padding: 2rem 5% 5rem;">
+            <div class="glass-card" style="max-width: 900px; margin: 0 auto;">
+                <h3 style="text-align: center; border-bottom: none; display: block; margin-bottom: 0.5rem;">Educational Qualifications</h3>
+                <div style="border-bottom: 3px solid var(--secondary-color); width: 60px; margin: 0 auto 2.5rem;"></div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    
+                    <div class="edu-item" style="margin-bottom: 0;">
+                        <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 0.5rem;">International Clinical Oculoplasty Fellow</h4>
+                        <p style="font-size: 1.05rem; line-height: 1.6;"><strong>Siriraj Hospital</strong>, Bangkok<br>
+                        <span style="color: var(--text-muted); font-size: 0.95rem; font-weight: 600;">June 2025 - June 2026</span></p>
+                    </div>
+                    
+                    <div class="edu-item" style="margin-bottom: 0;">
+                        <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 0.5rem;">Clinical Fellow</h4>
+                        <p style="font-size: 1.05rem; line-height: 1.6;"><strong>Department of Orbit and Oculoplasty</strong><br><em>Sankara Eye Hospital, Bangalore</em><br>
+                        <span style="color: var(--text-muted); font-size: 0.95rem; font-weight: 600;">January 2020 - January 2022</span></p>
+                    </div>
+                    
+                    <div class="edu-item" style="margin-bottom: 0;">
+                        <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 0.5rem;">MS Ophthalmology</h4>
+                        <p style="font-size: 1.05rem; line-height: 1.6;"><strong>Kempegowda Institute of Medical Sciences</strong>, Bangalore<br><em>Rajiv Gandhi University of Health Sciences</em><br>
+                        <span style="color: var(--text-muted); font-size: 0.95rem; font-weight: 600;">June 2016 - June 2019</span></p>
+                    </div>
+
+                    <div class="edu-item" style="margin-bottom: 0;">
+                        <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 0.5rem;">Internship</h4>
+                        <p style="font-size: 1.05rem; line-height: 1.6;">
+                        <span style="color: var(--text-muted); font-size: 0.95rem; font-weight: 600;">2011 - 2012</span></p>
+                    </div>
+                    
+                    <div class="edu-item" style="margin-bottom: 0;">
+                        <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 0.5rem;">MBBS</h4>
+                        <p style="font-size: 1.05rem; line-height: 1.6;"><strong>Kempegowda Institute of Medical Sciences</strong>, Bangalore<br><em>Rajiv Gandhi University of Health Sciences</em><br>
+                        <span style="color: var(--text-muted); font-size: 0.95rem; font-weight: 600;">September 2006 - June 2011</span></p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. TESTIMONIALS -->
+        <section id="testimonials" class="testimonial-split-section">
+            <h2 class="section-title" style="color: white;">Patient Testimonials</h2>
+            <div class="testimonial-container">
+                <div class="carousel-left">
+                    <img src="https://via.placeholder.com/300x400/0d2a4a/ffffff?text=Patient+1" alt="Patient 1" class="carousel-photo" data-index="0">
+                    <img src="https://via.placeholder.com/300x400/1765c9/ffffff?text=Patient+2" alt="Patient 2" class="carousel-photo" data-index="1">
+                    <img src="https://via.placeholder.com/300x400/64748b/ffffff?text=Patient+3" alt="Patient 3" class="carousel-photo" data-index="2">
+                </div>
+                <div class="text-right glass-box">
+                    <div class="carousel-text" data-index="0">
+                        <p class="quote">"My drooping eyelids were heavily affecting my vision. Dr. Das completely transformed my confidence. The recovery was incredibly smooth and the results look completely natural."</p>
+                        <h4>- Anita R.</h4>
+                        <span class="surgery-tag">Ptosis Correction</span>
+                    </div>
+                    <div class="carousel-text" data-index="1">
+                        <p class="quote">"I suffered from a blocked tear duct and constant watering for three years. The endoscopic surgery left no scars, and I am finally pain-free and tear-free."</p>
+                        <h4>- Rajesh K.</h4>
+                        <span class="surgery-tag">Endoscopic DCR</span>
+                    </div>
+                    <div class="carousel-text" data-index="2">
+                        <p class="quote">"After my accident, I experienced severe double vision. Dr. Santanu's expertise in orbital anatomy saved my vision. You cannot even tell I had a fracture."</p>
+                        <h4>- Vikram S.</h4>
+                        <span class="surgery-tag">Orbital Reconstruction</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PATIENT INFORMATION & CONDITIONS (Fully Synchronized Hub) -->
+        <section id="patient-information" class="centered-section" style="background-color: white;">
+            <h2 class="section-title">Patient Information Hub</h2>
+            <p style="max-width: 800px; margin: -1.5rem auto 3rem; font-size: 1.15rem; color: var(--text-muted); line-height: 1.6;">
+                Select a condition below to jump directly to detailed information regarding symptoms, treatment options, and what to expect during recovery.
+            </p>
+            
+            <div class="grid-container" style="max-width: 1200px;">
+                
+                <!-- 1. Ptosis Management -->
+                <a href="conditions-treatment.html#ptosis" class="info-card" style="text-align: center;">
+                    <h3 style="font-size: 1.3rem;">Ptosis Management</h3>
+                    <p style="font-size: 1rem;">Overview, types, symptoms including astigmatism and amblyopia, and surgical options.</p>
+                </a>
+
+                <!-- 2. Ectropion & Entropion Management -->
+                <a href="conditions-treatment.html#ectropion-entropion" class="info-card" style="text-align: center;">
+                    <h3 style="font-size: 1.3rem;">Ectropion & Entropion Management</h3>
+                    <p style="font-size: 1rem;">Outward and inward turning of the eyelids, clinical presentation, and surgical care.</p>
+                </a>
+
+                <!-- 3. Cosmetic Lid Procedures -->
+                <a href="conditions-treatment.html#aesthetics" class="info-card" style="text-align: center;">
+                    <h3 style="font-size: 1.3rem;">Cosmetic Lid Procedures</h3>
+                    <p style="font-size: 1rem;">Upper lid blepharoplasty, brow lifts, lower lid bags correction, and therapeutic/cosmetic Botox.</p>
+                </a>
+
+                <!-- 4. Orbit and Socket Related Problems -->
+                <a href="conditions-treatment.html#orbit" class="info-card" style="text-align: center;">
+                    <h3 style="font-size: 1.3rem;">Orbit and Socket Related Problems</h3>
+                    <p style="font-size: 1rem;">Proptosis management, orbital fractures, and inflammatory/traumatic optic conditions.</p>
+                </a>
+
+                <!-- 5. Thyroid Eye Disease -->
+                <a href="conditions-treatment.html#thyroid" class="info-card" style="text-align: center;">
+                    <h3 style="font-size: 1.3rem;">Thyroid Eye Disease</h3>
+                    <p style="font-size: 1rem;">Autoimmune inflammation, active and inactive phases, medical protocols, and rehabilitative surgery.</p>
+                </a>
+
+                <!-- 6. Socket Reconstruction -->
+                <a href="conditions-treatment.html#socket" class="info-card" style="text-align: center;">
+                    <h3 style="font-size: 1.3rem;">Socket Reconstruction</h3>
+                    <p style="font-size: 1rem;">Rebuilding anophthalmic sockets using orbital implants, mucous membrane, and dermis fat grafts.</p>
+                </a>
+
+                <!-- 7. Epiphora (Watering From Eyes) -->
+                <a href="conditions-treatment.html#tearduct" class="info-card" style="text-align: center;">
+                    <h3 style="font-size: 1.3rem;">Epiphora (Watering From Eyes)</h3>
+                    <p style="font-size: 1rem;">Outflow obstruction, dry eye, meibomian gland dysfunction, and nasolacrimal duct procedures.</p>
+                </a>
+
+                <!-- 8. Ocular Surface Disorders & Tumors -->
+                <a href="conditions-treatment.html#tumor" class="info-card" style="text-align: center;">
+                    <h3 style="font-size: 1.3rem;">Ocular Surface Disorders & Tumors</h3>
+                    <p style="font-size: 1rem;">Surface lesions excision, Stevens-Johnson syndrome, pterygium, and complex orbital/lacrimal tumors.</p>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER & COPYRIGHT -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Dr. Santanu Das. All rights reserved.</p>
+        <p class="creator-credits">Created by Aniket Sarkar</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
