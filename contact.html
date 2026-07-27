@@ -6,22 +6,48 @@
     <title>Contact & Booking | Dr. Santanu Das</title>
     <link rel="stylesheet" href="style.css">
     
-    <!-- Adding a tiny bit of specific style just for the form inputs -->
+    <!-- Specific compact form styles for desktop refinement -->
     <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1.2fr;
+            gap: 3rem;
+            align-items: start;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 5% 4rem;
+        }
+
         .form-input {
             width: 100%;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
+            padding: 0.8rem 1rem;
+            margin-bottom: 1rem;
             border: 1px solid rgba(0,0,0,0.1);
             border-radius: 8px;
             font-family: var(--font-main);
-            font-size: 1rem;
-            background: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+            background: rgba(255,255,255,0.85);
             transition: border-color 0.3s;
         }
         .form-input:focus {
             outline: none;
             border-color: var(--secondary-color);
+        }
+
+        .info-block {
+            margin-bottom: 1.8rem;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 25px rgba(13, 42, 74, 0.04);
+        }
+
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
         }
     </style>
 </head>
@@ -34,92 +60,95 @@
         <div class="bubble bubble-3"></div>
     </div>
 
-    <!-- Header & Navigation Trigger -->
+    <!-- Header -->
     <header>
-        <a href="index.html" style="text-decoration: none;">
-            <h1 class="logo">Dr. Santanu Das</h1>
-        </a>
         <div class="menu-toggle" id="menu-toggle">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
+        <a href="index.html" style="text-decoration: none;">
+            <h1 class="logo">Dr. Santanu Das</h1>
+        </a>
     </header>
-
-    <!-- Floating Back Button -->
-    <a href="#" onclick="history.back(); return false;" class="floating-back-btn" title="Go Back">&#8592;</a>
-
-    <!-- Glassmorphism Dropdown Menu (Slides down from above) -->
-   <!-- Dropdown Menu with Sub-Menu & Tooltips -->
-    <nav class="dropdown-menu" id="dropdown-menu">
+    
+    <!-- Left-Side Sliding Dropdown Menu with Patient Info Sub-menu -->
+    <nav class="dropdown-menu-left" id="dropdown-menu">
         <ul class="menu-list">
             
-            <li class="menu-item tooltip-container">
+            <li class="menu-item">
                 <a href="index.html" class="menu-link">Home</a>
-                <span class="hover-tooltip">Return to the main homepage</span>
-            </li>
-            
-            <li class="menu-item tooltip-container has-submenu">
-                <div class="menu-link submenu-toggle" id="about-toggle">About Dr. Das <span class="arrow">▼</span></div>
-                <span class="hover-tooltip">Doctor profile, expertise & education</span>
-                <ul class="submenu" id="about-submenu">
-                    <li><a href="profile.html#expertise">Core Expertise</a></li>
-                </ul>
             </li>
 
-            <li class="menu-item tooltip-container">
-                <a href="conditions-treatment.html" class="menu-link">Conditions & Treatments</a>
-                <span class="hover-tooltip">Detailed medical info & recovery timelines</span>
+            <li class="menu-item">
+                <a href="profile.html#expertise" class="menu-link">Core Expertise</a>
+            </li>
+
+            <!-- Patient Information Accordion Tab inside Menu -->
+            <li class="menu-item has-submenu">
+                <div class="menu-link submenu-toggle" id="patient-info-toggle">Patient Information <span class="arrow">▼</span></div>
+                <ul class="submenu" id="patient-info-submenu">
+                    <li><a href="conditions-treatment.html#ptosis">Ptosis Management</a></li>
+                    <li><a href="conditions-treatment.html#ectropion-entropion">Ectropion & Entropion</a></li>
+                    <li><a href="conditions-treatment.html#aesthetics">Cosmetic Lid Procedures</a></li>
+                    <li><a href="conditions-treatment.html#orbit">Orbit & Socket Problems</a></li>
+                    <li><a href="conditions-treatment.html#thyroid">Thyroid Eye Disease</a></li>
+                    <li><a href="conditions-treatment.html#socket">Socket Reconstruction</a></li>
+                    <li><a href="conditions-treatment.html#tearduct">Epiphora (Watering)</a></li>
+                    <li><a href="conditions-treatment.html#trauma">Oculofacial Trauma</a></li>
+                    <li><a href="conditions-treatment.html#tumor">Surface Disorders & Tumors</a></li>
+                </ul>
             </li>
             
-            <li class="menu-item tooltip-container">
+            <li class="menu-item">
                 <a href="media-press.html" class="menu-link">Media & Press</a>
-                <span class="hover-tooltip">Latest updates and published stories</span>
             </li>
             
-            <li class="menu-item tooltip-container">
+            <li class="menu-item">
                 <a href="gallery.html" class="menu-link">Clinical Gallery</a>
-                <span class="hover-tooltip">View our state-of-the-art facilities</span>
             </li>
             
-            <li class="menu-item tooltip-container">
-                <a href="contact.html" class="menu-link">Contact</a>
-                <span class="hover-tooltip">Clinic address and consultation booking</span>
+            <li class="menu-item">
+                <a href="contact.html" class="menu-link" style="color: var(--secondary-color);">Contact</a>
             </li>
             
         </ul>
     </nav>
-    <!-- Main Content (Dynamically slides down when menu opens) -->
+
+    <!-- Floating Back Button -->
+    <a href="#" onclick="history.back(); return false;" class="floating-back-btn" title="Go Back">&#8592;</a>
+
+    <!-- Main Content -->
     <main id="main-content">
         
         <!-- Page Header -->
-        <section style="padding-top: 100px; text-align: center; padding-bottom: 2rem;">
-            <h2 class="section-title" style="margin-bottom: 1rem;">Contact & Consultation</h2>
-            <p style="max-width: 800px; margin: 0 auto; color: var(--text-light); font-size: 1.1rem; padding: 0 5%;">
-                Ready to restore your vision and aesthetic harmony? Reach out to our team to schedule your personalized consultation with Dr. Santanu Das.
+        <section style="padding-top: 6rem; text-align: center; padding-bottom: 1.5rem;">
+            <h2 class="section-title" style="margin-bottom: 0.75rem;">Contact & Consultation</h2>
+            <p style="max-width: 650px; margin: 0 auto; color: var(--text-muted); font-size: 1.05rem; padding: 0 5%; line-height: 1.6;">
+                Ready to restore your vision and aesthetic harmony? Reach out to schedule your personalized consultation.
             </p>
         </section>
 
-        <!-- Contact Split Layout -->
-        <section class="split-section" style="padding-top: 2rem;">
+        <!-- Refined Contact Split Layout Grid -->
+        <div class="contact-grid">
             
-            <!-- Left Side: Clinic Info -->
-            <div style="padding-right: 2rem;">
-                <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1.5rem;">Clinic Information</h3>
+            <!-- Left Side: Clinic Info Blocks -->
+            <div>
+                <h3 style="font-size: 1.6rem; color: var(--primary-color); margin-bottom: 1.2rem;">Clinic Information</h3>
                 
-                <div style="margin-bottom: 2rem;">
-                    <h4 style="font-size: 1.2rem; color: var(--secondary-color); margin-bottom: 0.5rem;">Address</h4>
-                    <p style="font-size: 1.1rem; line-height: 1.6;">123 Medical Plaza, Suite 400<br>Health Avenue<br>City, State, ZIP Code</p>
+                <div class="info-block">
+                    <h4 style="font-size: 1.1rem; color: var(--secondary-color); margin-bottom: 0.4rem;">Address</h4>
+                    <p style="font-size: 0.95rem; line-height: 1.5; color: var(--text-dark);">123 Medical Plaza, Suite 400<br>Health Avenue<br>City, State, ZIP Code</p>
                 </div>
 
-                <div style="margin-bottom: 2rem;">
-                    <h4 style="font-size: 1.2rem; color: var(--secondary-color); margin-bottom: 0.5rem;">Contact Details</h4>
-                    <p style="font-size: 1.1rem; line-height: 1.6;"><strong>Phone:</strong> +1 (234) 567-8900<br><strong>Email:</strong> appointments@drsantanudas.com</p>
+                <div class="info-block">
+                    <h4 style="font-size: 1.1rem; color: var(--secondary-color); margin-bottom: 0.4rem;">Contact Details</h4>
+                    <p style="font-size: 0.95rem; line-height: 1.5; color: var(--text-dark);"><strong>Phone:</strong> +1 (234) 567-8900<br><strong>Email:</strong> appointments@drsantanudas.com</p>
                 </div>
 
-                <div style="margin-bottom: 2rem;">
-                    <h4 style="font-size: 1.2rem; color: var(--secondary-color); margin-bottom: 0.5rem;">Operating Hours</h4>
-                    <ul style="list-style: none; padding: 0; font-size: 1.1rem; line-height: 1.6;">
+                <div class="info-block">
+                    <h4 style="font-size: 1.1rem; color: var(--secondary-color); margin-bottom: 0.4rem;">Operating Hours</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.95rem; line-height: 1.6; color: var(--text-dark);">
                         <li><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</li>
                         <li><strong>Saturday:</strong> 10:00 AM - 2:00 PM</li>
                         <li><strong>Sunday:</strong> Closed</li>
@@ -127,9 +156,9 @@
                 </div>
             </div>
 
-            <!-- Right Side: Booking Form -->
-            <div class="glass-card">
-                <h3 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 1.5rem;">Request an Appointment</h3>
+            <!-- Right Side: Compact Booking Form Card -->
+            <div class="glass-card" style="padding: 2.5rem;">
+                <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 1.2rem; border-bottom: none; padding-bottom: 0;">Request an Appointment</h3>
                 
                 <form action="#" method="POST">
                     <input type="text" class="form-input" placeholder="Full Name" required>
@@ -149,17 +178,23 @@
                         <option value="other">Other</option>
                     </select>
 
-                    <textarea class="form-input" rows="4" placeholder="Briefly describe your symptoms or inquiry..." required></textarea>
+                    <textarea class="form-input" rows="3" placeholder="Briefly describe your symptoms or inquiry..." required style="margin-bottom: 1.2rem;"></textarea>
                     
-                    <button type="submit" class="animated-btn" style="width: 100%; border-radius: 8px;">Book Consultation</button>
+                    <button type="submit" class="animated-btn" style="width: 100%; border-radius: 8px; padding: 0.8rem 2rem; font-size: 1rem;">Book Consultation</button>
                 </form>
             </div>
 
-        </section>
+        </div>
 
     </main>
 
-    <!-- Connects to your animation logic -->
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Dr. Santanu Das. All rights reserved.</p>
+        <p class="creator-credits">Created by Aniket Sarkar</p>
+    </footer>
+
+    <!-- Connects to your global navigation script -->
     <script src="script.js"></script>
 </body>
 </html>
