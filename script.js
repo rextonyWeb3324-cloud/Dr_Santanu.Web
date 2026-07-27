@@ -1,27 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Sidebar Menu Toggle
+    // 1. Sidebar Menu Toggle (Left-Side Menu)
     const menuToggle = document.getElementById('menu-toggle');
     const dropdownMenu = document.getElementById('dropdown-menu');
 
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        dropdownMenu.classList.toggle('active');
-    });
+    if (menuToggle && dropdownMenu) {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevents click from instantly triggering document listener
+            menuToggle.classList.toggle('active');
+            dropdownMenu.classList.toggle('active');
+        });
 
-    // 2. Sub-menu Toggle Logic
-    const aboutToggle = document.getElementById('about-toggle');
-    const aboutSubmenu = document.getElementById('about-submenu');
+        // Prevent clicks inside the menu from closing it
+        dropdownMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
 
-    if(aboutToggle && aboutSubmenu) {
-        aboutToggle.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevents page jumping
-            aboutToggle.classList.toggle('open');
-            aboutSubmenu.classList.toggle('open');
+        // Close menu when clicking anywhere outside of it
+        document.addEventListener('click', () => {
+            if (dropdownMenu.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                dropdownMenu.classList.remove('active');
+            }
         });
     }
 
-    // 3. Split 3D Photo & Text Carousel Logic
+    // 2. Patient Information Sub-menu Toggle Logic (Accordion inside Menu)
+    const patientToggle = document.getElementById('patient-info-toggle');
+    const patientSubmenu = document.getElementById('patient-info-submenu');
+
+    if (patientToggle && patientSubmenu) {
+        patientToggle.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevents page jumping
+            e.stopPropagation(); // Prevents menu from closing when expanding accordion
+            patientToggle.classList.toggle('open');
+            patientSubmenu.classList.toggle('open');
+        });
+    }
+
+    // 3. Split 3D Photo & Text Carousel Logic (Runs only if carousel elements exist on the page)
     const photos = document.querySelectorAll('.carousel-photo');
     const texts = document.querySelectorAll('.carousel-text');
     let currentIndex = 0;
