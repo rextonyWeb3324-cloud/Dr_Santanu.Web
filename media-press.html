@@ -15,61 +15,66 @@
         <div class="bubble bubble-3"></div>
     </div>
 
-    <!-- Header & Navigation Trigger -->
+   <!-- Header -->
     <header>
-        <a href="index.html" style="text-decoration: none;">
-            <h1 class="logo">Dr. Santanu Das</h1>
-        </a>
         <div class="menu-toggle" id="menu-toggle">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
+        <a href="index.html" style="text-decoration: none;">
+            <h1 class="logo">Dr. Santanu Das</h1>
+        </a>
     </header>
-
+    
     <!-- Floating Back Button -->
     <a href="#" onclick="history.back(); return false;" class="floating-back-btn" title="Go Back">&#8592;</a>
 
-    <!-- Glassmorphism Dropdown Menu (Slides down from above) -->
-    <!-- Dropdown Menu with Sub-Menu & Tooltips -->
-    <nav class="dropdown-menu" id="dropdown-menu">
+    <!-- Left-Side Sliding Dropdown Menu with Patient Info Sub-menu -->
+    <nav class="dropdown-menu-left" id="dropdown-menu">
         <ul class="menu-list">
             
-            <li class="menu-item tooltip-container">
+            <li class="menu-item">
                 <a href="index.html" class="menu-link">Home</a>
-                <span class="hover-tooltip">Return to the main homepage</span>
-            </li>
-            
-            <li class="menu-item tooltip-container has-submenu">
-                <div class="menu-link submenu-toggle" id="about-toggle">About Dr. Das <span class="arrow">▼</span></div>
-                <span class="hover-tooltip">Doctor profile, expertise & education</span>
-                <ul class="submenu" id="about-submenu">
-                    <li><a href="profile.html#expertise">Core Expertise</a></li>
-                </ul>
             </li>
 
-            <li class="menu-item tooltip-container">
-                <a href="conditions-treatment.html" class="menu-link">Conditions & Treatments</a>
-                <span class="hover-tooltip">Detailed medical info & recovery timelines</span>
+            <li class="menu-item">
+                <a href="profile.html#expertise" class="menu-link">Core Expertise</a>
+            </li>
+
+            <!-- Patient Information Accordion Tab inside Menu -->
+            <li class="menu-item has-submenu">
+                <div class="menu-link submenu-toggle" id="patient-info-toggle">Patient Information <span class="arrow">▼</span></div>
+                <ul class="submenu" id="patient-info-submenu">
+                    <li><a href="conditions-treatment.html#ptosis">Ptosis Management</a></li>
+                    <li><a href="conditions-treatment.html#ectropion-entropion">Ectropion & Entropion</a></li>
+                    <li><a href="conditions-treatment.html#aesthetics">Cosmetic Lid Procedures</a></li>
+                    <li><a href="conditions-treatment.html#orbit">Orbit & Socket Problems</a></li>
+                    <li><a href="conditions-treatment.html#thyroid">Thyroid Eye Disease</a></li>
+                    <li><a href="conditions-treatment.html#socket">Socket Reconstruction</a></li>
+                    <li><a href="conditions-treatment.html#tearduct">Epiphora (Watering)</a></li>
+                    <li><a href="conditions-treatment.html#trauma">Oculofacial Trauma</a></li>
+                    <li><a href="conditions-treatment.html#tumor">Surface Disorders & Tumors</a></li>
+                </ul>
             </li>
             
-            <li class="menu-item tooltip-container">
+            <li class="menu-item">
                 <a href="media-press.html" class="menu-link">Media & Press</a>
-                <span class="hover-tooltip">Latest updates and published stories</span>
             </li>
             
-            <li class="menu-item tooltip-container">
+            <li class="menu-item">
                 <a href="gallery.html" class="menu-link">Clinical Gallery</a>
-                <span class="hover-tooltip">View our state-of-the-art facilities</span>
             </li>
             
-            <li class="menu-item tooltip-container">
+            <li class="menu-item">
                 <a href="contact.html" class="menu-link">Contact</a>
-                <span class="hover-tooltip">Clinic address and consultation booking</span>
             </li>
             
         </ul>
     </nav>
+
+    
+    
 
     <!-- Main Content (Dynamically slides down when menu opens) -->
     <main id="main-content">
