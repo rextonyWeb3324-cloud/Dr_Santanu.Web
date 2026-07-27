@@ -15,119 +15,371 @@
         <div class="bubble bubble-3"></div>
     </div>
 
-    <!-- Header & Navigation Trigger -->
+   <!-- Header -->
     <header>
-        <a href="index.html" style="text-decoration: none;">
-            <h1 class="logo">Dr. Santanu Das</h1>
-        </a>
         <div class="menu-toggle" id="menu-toggle">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
+        <a href="index.html" style="text-decoration: none;">
+            <h1 class="logo">Dr. Santanu Das</h1>
+        </a>
     </header>
-
+    
     <!-- Floating Back Button -->
     <a href="#" onclick="history.back(); return false;" class="floating-back-btn" title="Go Back">&#8592;</a>
 
-    <!-- Glassmorphism Dropdown Menu (Slides down from above) -->
-   <!-- Dropdown Menu with Sub-Menu & Tooltips -->
-    <nav class="dropdown-menu" id="dropdown-menu">
+    <!-- Left-Side Sliding Dropdown Menu with Patient Info Sub-menu -->
+    <nav class="dropdown-menu-left" id="dropdown-menu">
         <ul class="menu-list">
             
-            <li class="menu-item tooltip-container">
+            <li class="menu-item">
                 <a href="index.html" class="menu-link">Home</a>
-                <span class="hover-tooltip">Return to the main homepage</span>
-            </li>
-            
-            <li class="menu-item tooltip-container has-submenu">
-                <div class="menu-link submenu-toggle" id="about-toggle">About Dr. Das <span class="arrow">▼</span></div>
-                <span class="hover-tooltip">Doctor profile, expertise & education</span>
-                <ul class="submenu" id="about-submenu">
-                    <li><a href="profile.html#expertise">Core Expertise</a></li>
-                </ul>
             </li>
 
-            <li class="menu-item tooltip-container">
-                <a href="conditions-treatment.html" class="menu-link">Conditions & Treatments</a>
-                <span class="hover-tooltip">Detailed medical info & recovery timelines</span>
+            <li class="menu-item">
+                <a href="profile.html#expertise" class="menu-link">Core Expertise</a>
+            </li>
+
+            <!-- Patient Information Accordion Tab inside Menu -->
+            <li class="menu-item has-submenu">
+                <div class="menu-link submenu-toggle" id="patient-info-toggle">Patient Information <span class="arrow">▼</span></div>
+                <ul class="submenu" id="patient-info-submenu">
+                    <li><a href="conditions-treatment.html#ptosis">Ptosis Management</a></li>
+                    <li><a href="conditions-treatment.html#ectropion-entropion">Ectropion & Entropion</a></li>
+                    <li><a href="conditions-treatment.html#aesthetics">Cosmetic Lid Procedures</a></li>
+                    <li><a href="conditions-treatment.html#orbit">Orbit & Socket Problems</a></li>
+                    <li><a href="conditions-treatment.html#thyroid">Thyroid Eye Disease</a></li>
+                    <li><a href="conditions-treatment.html#socket">Socket Reconstruction</a></li>
+                    <li><a href="conditions-treatment.html#tearduct">Epiphora (Watering)</a></li>
+                    <li><a href="conditions-treatment.html#trauma">Oculofacial Trauma</a></li>
+                    <li><a href="conditions-treatment.html#tumor">Surface Disorders & Tumors</a></li>
+                </ul>
             </li>
             
-            <li class="menu-item tooltip-container">
+            <li class="menu-item">
                 <a href="media-press.html" class="menu-link">Media & Press</a>
-                <span class="hover-tooltip">Latest updates and published stories</span>
             </li>
             
-            <li class="menu-item tooltip-container">
+            <li class="menu-item">
                 <a href="gallery.html" class="menu-link">Clinical Gallery</a>
-                <span class="hover-tooltip">View our state-of-the-art facilities</span>
             </li>
             
-            <li class="menu-item tooltip-container">
+            <li class="menu-item">
                 <a href="contact.html" class="menu-link">Contact</a>
-                <span class="hover-tooltip">Clinic address and consultation booking</span>
             </li>
             
         </ul>
     </nav>
+    
+    
 
-    <!-- Main Content (Dynamically slides down when menu opens) -->
+    
+
+    <!-- Main Content -->
     <main id="main-content">
         
-        <!-- Page Header -->
-        <section style="padding-top: 100px; text-align: center; padding-bottom: 2rem;">
-            <h2 class="section-title" style="margin-bottom: 1rem;">Clinical Gallery</h2>
-            <p style="max-width: 800px; margin: 0 auto; color: var(--text-light); font-size: 1.1rem; padding: 0 5%;">
-                Take a look inside our state-of-the-art clinic, advanced surgical facilities, and dedicated patient care areas designed for your comfort and safety.
-            </p>
-        </section>
+        <section class="content-section">
+            
+            <div class="glass-card page-title-card">
+                <h2>Clinical & Procedural Gallery</h2>
+                <div class="title-divider"></div>
+                <p>
+                    A visual archive showcasing clinical cases, diagnostics, surgical evaluations, and reconstructive management procedures.
+                </p>
+            </div>
 
-        <!-- Gallery Grid -->
-        <section style="padding: 2rem 5% 6rem;">
-            <div class="grid-container">
-                
-                <!-- Gallery Item 1 -->
-                <div class="glass-card" style="padding: 1rem; text-align: center; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <img src="https://via.placeholder.com/600x400/e2e8f0/0d2a4a?text=Consultation+Room" alt="Consultation Room" style="width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;">
-                    <h3 style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 0; border: none; padding-bottom: 0;">Consultation Room</h3>
+            <!-- GALLERY GRID -->
+            <div class="gallery-grid">
+
+                <!-- 1. Ptosis Management -->
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="Images/astigmatism.jpeg" alt="Ptosis & Astigmatism">
+                        <div class="gallery-tag">Ptosis Management</div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Vision & Astigmatism Analysis</h4>
+                        <p>Clinical evaluation of upper lid drooping affecting visual axis and astigmatism correction.</p>
+                    </div>
                 </div>
 
-                <!-- Gallery Item 2 -->
-                <div class="glass-card" style="padding: 1rem; text-align: center; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <img src="https://via.placeholder.com/600x400/e2e8f0/0d2a4a?text=Operating+Theater" alt="Operating Theater" style="width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;">
-                    <h3 style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 0; border: none; padding-bottom: 0;">Operating Theater</h3>
+                <!-- 2. Ectropion Management -->
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="Images/ectropion.jpeg" alt="Ectropion">
+                        <div class="gallery-tag">Ectropion Care</div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Ectropion Correction</h4>
+                        <p>Surgical management for outward turning of the eyelid and laxity resolution.</p>
+                    </div>
                 </div>
 
-                <!-- Gallery Item 3 -->
-                <div class="glass-card" style="padding: 1rem; text-align: center; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <img src="https://via.placeholder.com/600x400/e2e8f0/0d2a4a?text=Patient+Lounge" alt="Patient Lounge" style="width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;">
-                    <h3 style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 0; border: none; padding-bottom: 0;">Waiting Lounge</h3>
+                <!-- 3. Entropion Management -->
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="Images/entropion.jpeg" alt="Entropion">
+                        <div class="gallery-tag">Entropion Care</div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Entropion Repair View</h4>
+                        <p>Treatment addressing inward turning of the eyelid protecting the ocular surface.</p>
+                    </div>
                 </div>
 
-                <!-- Gallery Item 4 -->
-                <div class="glass-card" style="padding: 1rem; text-align: center; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <img src="https://via.placeholder.com/600x400/e2e8f0/0d2a4a?text=Diagnostic+Equipment" alt="Diagnostic Equipment" style="width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;">
-                    <h3 style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 0; border: none; padding-bottom: 0;">Advanced Diagnostics</h3>
+                <!-- 4. Cosmetic Lid Procedures -->
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="Images/Lid laceration repair photo.jpeg" alt="Lid Laceration Repair">
+                        <div class="gallery-tag">Cosmetic Procedures</div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Upper Lid Laceration Repair</h4>
+                        <p>Precise cosmetic reconstruction and alignment following structural eyelid trauma.</p>
+                    </div>
                 </div>
 
-                <!-- Gallery Item 5 -->
-                <div class="glass-card" style="padding: 1rem; text-align: center; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <img src="https://via.placeholder.com/600x400/e2e8f0/0d2a4a?text=Recovery+Suite" alt="Recovery Suite" style="width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;">
-                    <h3 style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 0; border: none; padding-bottom: 0;">Post-Op Recovery Suite</h3>
+                <!-- 5. Thyroid Eye Disease - Clinical 1 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="Images/Thyroid 1.jpeg" alt="Thyroid Eye Disease">
+                        <div class="gallery-tag">Thyroid Eye Disease</div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Active Phase Presentation</h4>
+                        <p>Manifestation of autoimmune inflammation and soft tissue involvement around the eye.</p>
+                    </div>
                 </div>
 
-                <!-- Gallery Item 6 -->
-                <div class="glass-card" style="padding: 1rem; text-align: center; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <img src="https://via.placeholder.com/600x400/e2e8f0/0d2a4a?text=Exterior+View" alt="Exterior View" style="width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;">
-                    <h3 style="font-size: 1.2rem; color: var(--primary-color); margin-bottom: 0; border: none; padding-bottom: 0;">Clinic Exterior</h3>
+                <!-- 6. Thyroid Eye Disease - Clinical 2 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="Images/thyroid 3.jpeg" alt="Thyroid Eye Disease">
+                        <div class="gallery-tag">Thyroid Eye Disease</div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Rehabilitative Assessment</h4>
+                        <p>Evaluation post-management and decompression treatment milestones.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Thyroid Eye Disease - MRI Scan -->
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="Images/thyroid 2.jpeg" alt="MRI Scan">
+                        <div class="gallery-tag">Orbital Imaging</div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>MRI Extraocular Muscles</h4>
+                        <p>Diagnostic imaging showing thickened extraocular muscles characteristic of TED.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Oculofacial Trauma Cases -->
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="Images/oculofacial trauma 1.jpeg" alt="Oculofacial Trauma">
+                        <div class="gallery-tag">Oculofacial Trauma</div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Trauma Presentation 1</h4>
+                        <p>Acute assessment of periorbital tissue injury and swelling following impact.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="Images/oculofacial trauma 2.jpeg" alt="Oculofacial Trauma">
+                        <div class="gallery-tag">Oculofacial Trauma</div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Trauma Presentation 2</h4>
+                        <p>Comprehensive evaluation of soft tissue damage prior to surgical stabilization.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="Images/ChatGPT Image Jul 27, 2026, 07_53_38 PM.png" alt="Trauma Management">
+                        <div class="gallery-tag">Oculofacial Trauma</div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Post-Intervention Reconstruction</h4>
+                        <p>Post-surgical recovery following orbital floor fracture fixation and soft tissue repair.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Socket Reconstruction -->
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="Images/Socket reconstruction with dermis fat graft followed by prosthetic eye placement.jpeg" alt="Socket Reconstruction">
+                        <div class="gallery-tag">Socket Reconstruction</div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Dermis Fat Grafting</h4>
+                        <p>Socket reconstruction utilizing dermis fat grafts followed by custom prosthetic eye placement.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="Images/Artificial eye placement post evisceration plus ball implant..jpeg" alt="Artificial Eye Placement">
+                        <div class="gallery-tag">Socket Reconstruction</div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Post-Evisceration Prosthesis</h4>
+                        <p>Artificial eye placement following primary evisceration and PMMA ball implant procedure.</p>
+                    </div>
                 </div>
 
             </div>
+
         </section>
 
     </main>
 
-    <!-- Connects to your animation logic -->
+    <!-- FOOTER & COPYRIGHT -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Dr. Santanu Das. All rights reserved.</p>
+        <p class="creator-credits">Created by Aniket Sarkar</p>
+    </footer>
+
     <script src="script.js"></script>
+    
+    <style>
+        * { box-sizing: border-box; }
+
+        .content-section {
+            padding: 6rem 5% 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .page-title-card {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 2.5rem;
+        }
+
+        .page-title-card h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .title-divider {
+            border-bottom: 3px solid var(--secondary-color);
+            width: 60px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .page-title-card p {
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            color: var(--text-dark);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Gallery Grid Layout */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            width: 100%;
+        }
+
+        .gallery-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(13, 42, 74, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(13, 42, 74, 0.15);
+        }
+
+        .gallery-img-container {
+            position: relative;
+            width: 100%;
+            height: 240px;
+            background-color: #f8fafc;
+            overflow: hidden;
+        }
+
+        .gallery-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-card:hover .gallery-img-container img {
+            transform: scale(1.05);
+        }
+
+        .gallery-tag {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(13, 42, 74, 0.88);
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .gallery-info {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .gallery-info h4 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-info p {
+            font-size: 0.95rem;
+            color: var(--text-dark, #333);
+            line-height: 1.5;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .content-section {
+                padding: 4rem 4% 3rem;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .gallery-img-container {
+                height: 220px;
+            }
+            .page-title-card {
+                padding: 1.5rem;
+                margin-bottom: 2.5rem;
+            }
+        }
+    </style>
 </body>
 </html>
