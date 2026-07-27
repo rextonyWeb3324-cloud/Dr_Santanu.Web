@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conditions & Treatments | Dr. Santanu Das</title>
+    <title>Patient Information | Dr. Santanu Das</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,28 +17,56 @@
 
     <!-- Header -->
     <header>
-        <a href="index.html" style="text-decoration: none;">
-            <h1 class="logo">Dr. Santanu Das</h1>
-        </a>
         <div class="menu-toggle" id="menu-toggle">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
+        <a href="index.html" style="text-decoration: none;">
+            <h1 class="logo">Dr. Santanu Das</h1>
+        </a>
     </header>
-    
-    <!-- Floating Back Button -->
-    <a href="#" onclick="history.back(); return false;" class="floating-back-btn" title="Go Back">&#8592;</a>
 
-    <!-- Dropdown Menu -->
-    <nav class="dropdown-menu" id="dropdown-menu">
+    <!-- Left-Side Sliding Dropdown Menu with Patient Info Sub-menu -->
+    <nav class="dropdown-menu-left" id="dropdown-menu">
         <ul class="menu-list">
-            <li class="menu-item"><a href="index.html" class="menu-link">Home</a></li>
-            <li class="menu-item"><a href="profile.html#expertise" class="menu-link">Core Expertise</a></li>
-            <li class="menu-item"><a href="conditions-treatment.html" class="menu-link" style="color: var(--secondary-color);">Conditions & Treatments</a></li>
-            <li class="menu-item"><a href="media-press.html" class="menu-link">Media & Press</a></li>
-            <li class="menu-item"><a href="gallery.html" class="menu-link">Clinical Gallery</a></li>
-            <li class="menu-item"><a href="contact.html" class="menu-link">Contact</a></li>
+            
+            <li class="menu-item">
+                <a href="index.html" class="menu-link">Home</a>
+            </li>
+
+            <li class="menu-item">
+                <a href="profile.html#expertise" class="menu-link">Core Expertise</a>
+            </li>
+
+            <!-- Patient Information Accordion Tab inside Menu -->
+            <li class="menu-item has-submenu">
+                <div class="menu-link submenu-toggle" id="patient-info-toggle">Patient Information <span class="arrow">▼</span></div>
+                <ul class="submenu" id="patient-info-submenu">
+                    <li><a href="conditions-treatment.html#ptosis">Ptosis Management</a></li>
+                    <li><a href="conditions-treatment.html#ectropion-entropion">Ectropion & Entropion</a></li>
+                    <li><a href="conditions-treatment.html#aesthetics">Cosmetic Lid Procedures</a></li>
+                    <li><a href="conditions-treatment.html#orbit">Orbit & Socket Problems</a></li>
+                    <li><a href="conditions-treatment.html#thyroid">Thyroid Eye Disease</a></li>
+                    <li><a href="conditions-treatment.html#socket">Socket Reconstruction</a></li>
+                    <li><a href="conditions-treatment.html#tearduct">Epiphora (Watering)</a></li>
+                    <li><a href="conditions-treatment.html#trauma">Oculofacial Trauma</a></li>
+                    <li><a href="conditions-treatment.html#tumor">Surface Disorders & Tumors</a></li>
+                </ul>
+            </li>
+            
+            <li class="menu-item">
+                <a href="media-press.html" class="menu-link">Media & Press</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="gallery.html" class="menu-link">Clinical Gallery</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="contact.html" class="menu-link">Contact</a>
+            </li>
+            
         </ul>
     </nav>
 
@@ -48,7 +76,7 @@
         <section class="content-section">
             
             <div class="glass-card page-title-card">
-                <h2>Conditions & Treatments</h2>
+                <h2>Patient Information</h2>
                 <div class="title-divider"></div>
                 <p>
                     Comprehensive medical and surgical management protocols offered for advanced oculoplastic, orbital, lacrimal, and cosmetic conditions.
@@ -56,113 +84,61 @@
             </div>
 
             <!-- ========================================= -->
-            <!-- PTOSIS MANAGEMENT SUB-SECTIONS -->
+            <!-- 1. PTOSIS MANAGEMENT -->
             <!-- ========================================= -->
-            
-            <h3 id="ptosis" class="category-heading">Ptosis Management</h3>
+            <div id="ptosis" class="category-block">
+                <h3 class="category-heading">Ptosis Management</h3>
 
-            <!-- Ptosis Sub-section 1 (Image on Right) -->
-            <div class="condition-row">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>Ptosis Overview & Types</h4>
-                        <p>Ptosis is the drooping of the upper eyelid. It can be congenital, aponeurotic or involutional, myogenic (due to myasthenia gravis, CPEO), neurogenic (due to third nerve palsy), or mechanical (due to any lesion on the upper lid).</p>
-                    </div>
+                <div class="info-card">
+                    <h4>Ptosis Overview & Types</h4>
+                    <p>Ptosis is the drooping of the upper eyelid. It can be congenital, aponeurotic or involutional, myogenic (due to myasthenia gravis, CPEO), neurogenic (due to third nerve palsy), or mechanical (due to any lesion on the upper lid).</p>
                 </div>
-                <div class="condition-carousel-container">
+                <div class="info-card">
+                    <h4>Symptoms & Clinical Signs (astigmatism, amblyopia)</h4>
+                    <p>Drooping of the upper lid blocking vision, chin up position, astigmatism, amblyopia (especially in congenital ptosis), and constant use of eyebrows to lift the upper lid leading to eye strain, heaviness, and tiredness.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Surgical & Medical Treatment</h4>
+                    <p>Almost always surgical. Congenital ptosis utilizes frontalis flap/sling surgery, maximal levator resection, or fascia lata sling. Aponeurotic uses levator advancement or resection. Myogenic/neurogenic use crutch glasses and targeted surgeries, while mechanical ptosis focuses on treating the underlying cause.</p>
+                </div>
+
+                <div class="section-image-row">
                     <div class="pure-image-carousel" data-carousel>
                         <div class="carousel-slide active">
                             <img src="santanu-das.png" alt="Ptosis Overview">
                             <div class="image-popup-tag">Ptosis Evaluation View 1</div>
                         </div>
                         <div class="carousel-slide">
-                            <img src="santanu-das.png" alt="Ptosis Overview">
-                            <div class="image-popup-tag">Ptosis Evaluation View 2</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ptosis Sub-section 2 (Image on Left - Alternating) -->
-            <div class="condition-row alt-layout">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>Symptoms & Clinical Signs (astigmatism, amblyopia)</h4>
-                        <p>Drooping of the upper lid blocking vision, chin up position, astigmatism, amblyopia (especially in congenital ptosis), and constant use of eyebrows to lift the upper lid leading to eye strain, heaviness, and tiredness.</p>
-                    </div>
-                </div>
-                <div class="condition-carousel-container">
-                    <div class="pure-image-carousel" data-carousel>
-                        <div class="carousel-slide active">
                             <img src="Images/astigmatism.jpeg" alt="Ptosis Symptoms">
                             <div class="image-popup-tag">Vision & Astigmatism</div>
                         </div>
-                        <div class="carousel-slide">
-                            <img src="santanu-das.png" alt="Ptosis Symptoms">
-                            <div class="image-popup-tag">Vision & Astigmatism Check 2</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ptosis Sub-section 3 (Image on Right) -->
-            <div class="condition-row">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>Surgical & Medical Treatment</h4>
-                        <p>Almost always surgical. Congenital ptosis utilizes frontalis flap/sling surgery, maximal levator resection, or fascia lata sling. Aponeurotic uses levator advancement or resection. Myogenic/neurogenic use crutch glasses and targeted surgeries, while mechanical ptosis focuses on treating the underlying cause.</p>
-                    </div>
-                </div>
-                <div class="condition-carousel-container">
-                    <div class="pure-image-carousel" data-carousel>
-                        <div class="carousel-slide active">
-                            <img src="santanu-das.png" alt="Ptosis Treatment">
-                            <div class="image-popup-tag">Surgical Correction Result 1</div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="santanu-das.png" alt="Ptosis Treatment">
-                            <div class="image-popup-tag">Surgical Correction Result 2</div>
-                        </div>
                     </div>
                 </div>
             </div>
 
 
             <!-- ========================================= -->
-            <!-- ECTROPION & ENTROPION SUB-SECTIONS -->
+            <!-- 2. ECTROPION & ENTROPION MANAGEMENT -->
             <!-- ========================================= -->
+            <div id="ectropion-entropion" class="category-block">
+                <h3 class="category-heading">Ectropion & Entropion Management</h3>
 
-            <h3 id="ectropion-entropion" class="category-heading">Ectropion & Entropion Management</h3>
-
-            <!-- Sub-section 1 (Image on Left) -->
-            <div class="condition-row alt-layout">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>Ectropion (Outward Turning of Eyelid)</h4>
-                        <p>Most commonly occurs due to aging, but can also happen due to trauma and previous surgery. Symptoms include redness, dryness, and epiphora (watering). Treatment is mainly surgical.</p>
-                    </div>
+                <div class="info-card">
+                    <h4>Ectropion (Outward Turning of Eyelid)</h4>
+                    <p>Most commonly occurs due to aging, but can also happen due to trauma and previous surgery. Symptoms include redness, dryness, and epiphora (watering). Treatment is mainly surgical.</p>
                 </div>
-                <div class="condition-carousel-container">
+                <div class="info-card">
+                    <h4>Entropion (Inward Turning of Eyelid)</h4>
+                    <p>Most commonly happens due to aging, trauma, previous surgery, or conditions like Stevens-Johnson syndrome. The eyelashes touch the ocular surface causing severe irritation, redness, and epiphora. Treatment is primarily surgical, though Botox can be used temporarily for patients unfit for surgery.</p>
+                </div>
+
+                <div class="section-image-row">
                     <div class="pure-image-carousel" data-carousel>
                         <div class="carousel-slide active">
                             <img src="Images/ectropion.jpeg" alt="Ectropion">
                             <div class="image-popup-tag">Ectropion Correction View</div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sub-section 2 (Image on Right) -->
-            <div class="condition-row">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>Entropion (Inward Turning of Eyelid)</h4>
-                        <p>Most commonly happens due to aging, trauma, previous surgery, or conditions like Stevens-Johnson syndrome. The eyelashes touch the ocular surface causing severe irritation, redness, and epiphora. Treatment is primarily surgical, though Botox can be used temporarily for patients unfit for surgery.</p>
-                    </div>
-                </div>
-                <div class="condition-carousel-container">
-                    <div class="pure-image-carousel" data-carousel>
-                        <div class="carousel-slide active">
+                        <div class="carousel-slide">
                             <img src="Images/entropion.jpeg" alt="Entropion">
                             <div class="image-popup-tag">Entropion Repair View</div>
                         </div>
@@ -172,58 +148,31 @@
 
 
             <!-- ========================================= -->
-            <!-- COSMETIC LID PROCEDURES SUB-SECTIONS -->
+            <!-- 3. COSMETIC LID PROCEDURES -->
             <!-- ========================================= -->
+            <div id="aesthetics" class="category-block">
+                <h3 class="category-heading">Cosmetic Lid Procedures</h3>
 
-            <h3 id="aesthetics" class="category-heading">Cosmetic Lid Procedures</h3>
-
-            <!-- Sub-section 1 (Image on Left) -->
-            <div class="condition-row alt-layout">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>1. Upper Lid Corrective Blepharoplasty & Brow Lifts</h4>
-                        <p>Includes upper lid corrective blepharoplasty, direct brow lift, and sub-brow blepharoplasty to rejuvenate upper facial aesthetics and clear obstructed vision.</p>
-                    </div>
+                <div class="info-card">
+                    <h4>1. Upper Lid Corrective Blepharoplasty & Brow Lifts</h4>
+                    <p>Includes upper lid corrective blepharoplasty, direct brow lift, and sub-brow blepharoplasty to rejuvenate upper facial aesthetics and clear obstructed vision.</p>
                 </div>
-                <div class="condition-carousel-container">
+                <div class="info-card">
+                    <h4>2. Lower Lid Bags Correction</h4>
+                    <p>Advanced transcutaneous and transconjunctival blepharoplasty techniques designed to remove or reposition lower lid fat pockets smoothly.</p>
+                </div>
+                <div class="info-card">
+                    <h4>3. Therapeutic & Cosmetic Botox</h4>
+                    <p>Targeted injections for Blepharospasms, hemi-facial problems, forehead wrinkles, crow’s feet, and functional rejuvenation.</p>
+                </div>
+
+                <div class="section-image-row">
                     <div class="pure-image-carousel" data-carousel>
                         <div class="carousel-slide active">
-                            <img src="santanu-das.png" alt="Cosmetic">
-                            <div class="image-popup-tag">Upper Lid Rejuvenation</div>
+                            <img src="Images/Lid laceration repair photo.jpeg" alt="Cosmetic">
+                            <div class="image-popup-tag">Upper Lid Laceration Repair</div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sub-section 2 (Image on Right) -->
-            <div class="condition-row">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>2. Lower Lid Bags Correction</h4>
-                        <p>Advanced transcutaneous and transconjunctival blepharoplasty techniques designed to remove or reposition lower lid fat pockets smoothly.</p>
-                    </div>
-                </div>
-                <div class="condition-carousel-container">
-                    <div class="pure-image-carousel" data-carousel>
-                        <div class="carousel-slide active">
-                            <img src="santanu-das.png" alt="Cosmetic">
-                            <div class="image-popup-tag">Lower Lid Blepharoplasty</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sub-section 3 (Image on Left) -->
-            <div class="condition-row alt-layout">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>3. Therapeutic & Cosmetic Botox</h4>
-                        <p>Targeted injections for Blepharospasms, hemi-facial problems, forehead wrinkles, crow’s feet, and functional rejuvenation.</p>
-                    </div>
-                </div>
-                <div class="condition-carousel-container">
-                    <div class="pure-image-carousel" data-carousel>
-                        <div class="carousel-slide active">
+                        <div class="carousel-slide">
                             <img src="santanu-das.png" alt="Cosmetic">
                             <div class="image-popup-tag">Botox Treatment Session</div>
                         </div>
@@ -233,38 +182,33 @@
 
 
             <!-- ========================================= -->
-            <!-- ORBIT & SOCKET RELATED PROBLEMS -->
+            <!-- 4. ORBIT AND SOCKET RELATED PROBLEMS -->
             <!-- ========================================= -->
+            <div id="orbit" class="category-block">
+                <h3 class="category-heading">Orbit and Socket Related Problems</h3>
 
-            <h3 id="orbit" class="category-heading">Orbit and Socket Related Problems</h3>
+                <div class="info-card">
+                    <h4>1. Proptosis Management</h4>
+                    <p>Specialized surgeries including anterior orbitotomy and lateral orbitotomy for accessing and removing orbital lesions causing prominent eyes.</p>
+                </div>
+                <div class="info-card" id="thyroid">
+                    <h4>2. Thyroid Eye Disease</h4>
+                    <p>Thyroid eye disease is an autoimmune disease causing inflammation and swelling of structures around the eye. It can cause swelling of extraocular muscles and orbital fat leading to optic nerve compression. It features an active inflammatory phase (treated with intravenous steroids, radiation, or second-line drugs like rituximab/tocilizumab) and an inactive stage (managed with rehabilitative surgeries like orbital decompression, squint surgery, and lid retraction repair).</p>
+                </div>
+                <div class="info-card">
+                    <h4>3. Orbital Fracture Repairs & Cellulitis</h4>
+                    <p>Paediatric and adult orbital fracture repairs using titanium implants/osteomesh, alongside aggressive management for orbital cellulitis.</p>
+                </div>
+                <div class="info-card" id="socket">
+                    <h4>4. Socket Reconstruction</h4>
+                    <p>Socket reconstruction rebuilds anophthalmic sockets using orbital implants, mucous membrane grafts, and dermis fat grafts. Common surgeries include evisceration/enucleation with ball implants (PMMA). Dermis fat grafts are harvested from the abdomen/buttocks; mucous membrane grafts from the lips/buccal cavity deepen shallow fornices. Artificial eye placement occurs after ~6 weeks for evisceration/enucleation or ~2 months for grafts.</p>
+                </div>
+                <div class="info-card">
+                    <h4>5. Inflammatory & Traumatic Optic Conditions</h4>
+                    <p>Management of lacrimal gland swellings, lymphoma, optic neuritis, myositis, and traumatic optic nerve damage.</p>
+                </div>
 
-            <!-- Sub-section 1 (Image on Right) -->
-            <div class="condition-row">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>1. Proptosis Management</h4>
-                        <p>Specialized surgeries including anterior orbitotomy and lateral orbitotomy for accessing and removing orbital lesions causing prominent eyes.</p>
-                    </div>
-                </div>
-                <div class="condition-carousel-container">
-                    <div class="pure-image-carousel" data-carousel>
-                        <div class="carousel-slide active">
-                            <img src="santanu-das.png" alt="Orbit">
-                            <div class="image-popup-tag">Proptosis Management</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sub-section 2 (Image on Left) -->
-            <div id="thyroid" class="condition-row alt-layout">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>2. Thyroid Eye Disease</h4>
-                        <p>Thyroid eye disease is an autoimmune disease causing inflammation and swelling of structures around the eye. It can cause swelling of extraocular muscles and orbital fat leading to optic nerve compression. It features an active inflammatory phase (treated with intravenous steroids, radiation, or second-line drugs like rituximab/tocilizumab) and an inactive stage (managed with rehabilitative surgeries like orbital decompression, squint surgery, and lid retraction repair).</p>
-                    </div>
-                </div>
-                <div class="condition-carousel-container">
+                <div class="section-image-row">
                     <div class="pure-image-carousel" data-carousel>
                         <div class="carousel-slide active">
                             <img src="Images/Thyroid 1.jpeg" alt="Orbit">
@@ -275,66 +219,12 @@
                             <div class="image-popup-tag">Thyroid Eye Disease</div>
                         </div>
                         <div class="carousel-slide">
-                            <img src="Images/thyroid 2.jpeg" alt="Orbit">
-                            <div class="image-popup-tag">MRI showing thickened extraocular muscles</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sub-section 3 (Image on Right) -->
-            <div class="condition-row">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>3. Orbital Fracture Repairs & Cellulitis</h4>
-                        <p>Paediatric and adult orbital fracture repairs using titanium implants/osteomesh, alongside aggressive management for orbital cellulitis.</p>
-                    </div>
-                </div>
-                <div class="condition-carousel-container">
-                    <div class="pure-image-carousel" data-carousel>
-                        <div class="carousel-slide active">
-                            <img src="santanu-das.png" alt="Orbit">
-                            <div class="image-popup-tag">Fracture Fixation</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sub-section 4 (Image on Left) -->
-            <div id="socket" class="condition-row alt-layout">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>4. Socket Reconstruction</h4>
-                        <p>Socket reconstruction rebuilds anophthalmic sockets using orbital implants, mucous membrane grafts, and dermis fat grafts. Common surgeries include evisceration/enucleation with ball implants (PMMA). Dermis fat grafts are harvested from the abdomen/buttocks; mucous membrane grafts from the lips/buccal cavity deepen shallow fornices. Artificial eye placement occurs after ~6 weeks for evisceration/enucleation or ~2 months for grafts.</p>
-                    </div>
-                </div>
-                <div class="condition-carousel-container">
-                    <div class="pure-image-carousel" data-carousel>
-                        <div class="carousel-slide active">
-                            <img src="Images/Socket reconstruction with dermis fat graft followed by prosthetic eye placement.jpeg" alt="Socket Reconstruction">
-                            <div class="image-popup-tag">Socket reconstruction with dermis fat graft followed by prosthetic eye placement</div>
+                            <img src="Images/oculofacial trauma 1.jpeg" alt="Orbit">
+                            <div class="image-popup-tag">CT scan showing blow out fracture</div>
                         </div>
                         <div class="carousel-slide">
-                            <img src="Images/Artificial eye placement post evisceration plus ball implant..jpeg" alt="Socket Reconstruction">
-                            <div class="image-popup-tag">Artificial eye placement post evisceration plus ball implant</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sub-section 5 (Image on Right) -->
-            <div class="condition-row">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>5. Inflammatory & Traumatic Optic Conditions</h4>
-                        <p>Management of lacrimal gland swellings, lymphoma, optic neuritis, myositis, and traumatic optic nerve damage.</p>
-                    </div>
-                </div>
-                <div class="condition-carousel-container">
-                    <div class="pure-image-carousel" data-carousel>
-                        <div class="carousel-slide active">
-                            <img src="santanu-das.png" alt="Orbit">
-                            <div class="image-popup-tag">Optic Nerve Care</div>
+                            <img src="Images/Socket reconstruction with dermis fat graft followed by prosthetic eye placement.jpeg" alt="Socket Reconstruction">
+                            <div class="image-popup-tag">Socket Reconstruction</div>
                         </div>
                     </div>
                 </div>
@@ -342,60 +232,34 @@
 
 
             <!-- ========================================= -->
-            <!-- EPIPHORA SUB-SECTIONS -->
+            <!-- 5. EPIPHORA (WATERING FROM EYES) -->
             <!-- ========================================= -->
+            <div id="tearduct" class="category-block">
+                <h3 class="category-heading">Epiphora (Watering From Eyes)</h3>
 
-            <h3 id="tearduct" class="category-heading">Epiphora (Watering From Eyes)</h3>
-
-            <!-- Sub-section 1 (Image on Left) -->
-            <div class="condition-row alt-layout">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>1. Outflow Obstruction & Laxity Repairs</h4>
-                        <p>Surgeries for continuous watering due to lid laxity, conjunctivochalasis, punctal stenosis, and canalicular obstruction, including trephination with stent, punctoplasty, and lateral tarsal strips.</p>
-                    </div>
+                <div class="info-card">
+                    <h4>Epiphora Overview & Definition</h4>
+                    <p><strong>Epiphora</strong> is the medical terminology for excessive watering from the eyes.</p>
                 </div>
-                <div class="condition-carousel-container">
+                <div class="info-card">
+                    <h4>Causes of Epiphora</h4>
+                    <p><strong>1. Blockage in the tear drainage pathway:</strong> Narrow or a blocked punctum, upper or lower canalicular stenosis/blockage, common canalicular blockage, canaliculitis, and nasolacrimal duct blockage.</p>
+                    <p style="margin-top: 0.5rem;"><strong>2. Eyelid abnormalities:</strong> Lid laxity, ectropion, entropion, epiblepharon, euryblepharon, and trichiasis (congenital or acquired).</p>
+                    <p style="margin-top: 0.5rem;"><strong>3. Ocular & Surface Abnormalities:</strong> Allergy, infection, inflammation, corneal/surface foreign body, pterygium, and conjunctivochalasis (loose conjunctiva).</p>
+                    <p style="margin-top: 0.5rem;"><strong>4. Dry Eye & MGD:</strong> Environmental dryness or secondary to Sjogren's syndrome, post-LASIK causing reflex watering, plus meibomian gland dysfunction (MGD).</p>
+                    <p style="margin-top: 0.5rem;"><strong>5. Excessive Production:</strong> Hypersecretion of tears can also lead to constant watering.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Treatment Options</h4>
+                    <p><strong>Tear Drainage Blockage (Surgical):</strong> External or Endoscopic DCR with stenting for nasolacrimal duct blockage; trephination with/without DCR and stenting for canalicular blockage; 3-snip procedure for punctal stenosis; and medical or canaliculotomy with curettage for canaliculitis.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Other Management:</strong> Surgical correction for lid abnormalities and conjunctivochalasis; medical management, hot fomentation, and IPL therapy for MGD; tear substitutes for dry eye; and medical protocols for infections/allergies.</p>
+                </div>
+
+                <div class="section-image-row">
                     <div class="pure-image-carousel" data-carousel>
                         <div class="carousel-slide active">
                             <img src="santanu-das.png" alt="Epiphora">
-                            <div class="image-popup-tag">Outflow Laxity Repair</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sub-section 2 (Image on Right) -->
-            <div class="condition-row">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>2. Dry Eye & Meibomian Gland Dysfunction</h4>
-                        <p>Comprehensive medical management and targeted therapies for chronic dry eye disease and Meibomian gland dysfunction.</p>
-                    </div>
-                </div>
-                <div class="condition-carousel-container">
-                    <div class="pure-image-carousel" data-carousel>
-                        <div class="carousel-slide active">
-                            <img src="santanu-das.png" alt="Epiphora">
-                            <div class="image-popup-tag">Dry Eye Therapies</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sub-section 3 (Image on Left) -->
-            <div class="condition-row alt-layout">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>3. Nasolacrimal Duct Obstruction Management</h4>
-                        <p>Endoscopic syringing/probing for congenital obstructions, alongside External DCR, Endoscopic DCR surgeries, and diagnostic nasal endoscopy.</p>
-                    </div>
-                </div>
-                <div class="condition-carousel-container">
-                    <div class="pure-image-carousel" data-carousel>
-                        <div class="carousel-slide active">
-                            <img src="santanu-das.png" alt="Epiphora">
-                            <div class="image-popup-tag">Nasolacrimal Duct DCR</div>
+                            <div class="image-popup-tag">Epiphora Evaluation & Protocols</div>
                         </div>
                     </div>
                 </div>
@@ -403,60 +267,77 @@
 
 
             <!-- ========================================= -->
-            <!-- OCULAR SURFACE SUB-SECTIONS -->
+            <!-- 6. OCULOFACIAL TRAUMA -->
             <!-- ========================================= -->
+            <div id="trauma" class="category-block">
+                <h3 class="category-heading">Oculofacial Trauma</h3>
 
-            <h3 id="tumor" class="category-heading">Ocular Surface Disorders & Tumors</h3>
-
-            <!-- Sub-section 1 (Image on Right) -->
-            <div class="condition-row">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>1. Ocular Surface Lesions & Tumors</h4>
-                        <p>Wide excision of lesions like OSSN, dermoids, naevi, and papillomas using a strict no-touch technique combined with amniotic membrane graft (AMG).</p>
-                    </div>
+                <div class="info-card">
+                    <h4>1. Overview & Causes</h4>
+                    <p>Oculofacial trauma involves physical injury to the eyelid and adnexal structures, eye, face, and the bony orbit surrounding the eye.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Most common causes:</strong> Assault, road traffic accidents, self-falls, and trauma with a blunt or sharp object.</p>
                 </div>
-                <div class="condition-carousel-container">
+                <div class="info-card">
+                    <h4>2. Signs & Symptoms</h4>
+                    <p>Clinical presentation includes redness of the eye, subconjunctival haemorrhage, swelling around the eye, extraocular movement restriction, diminution or loss of vision, and double vision.</p>
+                    <p style="margin-top: 0.5rem;">Also includes lid and oculofacial lacerations with or without skin loss, restriction of jaw movements, and compartment syndrome (tightness around the eye or a frozen globe).</p>
+                </div>
+                <div class="info-card">
+                    <h4>3. Diagnosis & Patient Stabilization</h4>
+                    <p>Requires a thorough ocular examination to rule out any intraocular or optic nerve injury, along with a CT scan of the face and head to check for facial fractures, muscle entrapment, and to rule out head injury. Patient stabilization is the primary initial step.</p>
+                </div>
+                <div class="info-card">
+                    <h4>4. Surgical & Medical Management</h4>
+                    <p><strong>Paediatric Fractures:</strong> Also called white-eyed fractures, requiring immediate surgery to release entrapped muscle and restore normal eye movement.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Adult Orbital Floor Fractures:</strong> Causing double vision, muscle entrapment, and severe enophthalmos require surgical intervention with an implant (best results within the first 2 weeks).</p>
+                    <p style="margin-top: 0.5rem;"><strong>ZMC & Comminuted Fractures:</strong> Require open reduction and internal fixation with screws, plates, and implants using a multidisciplinary approach (Oculoplasty and Maxillofacial surgeons).</p>
+                    <p style="margin-top: 0.5rem;"><strong>Lacerations & Neuropathy:</strong> Lid, canalicular, and oculofacial lacerations require reconstructive surgery; traumatic optic neuropathy requires immediate high-dose intravenous steroids.</p>
+                </div>
+
+                <div class="section-image-row">
                     <div class="pure-image-carousel" data-carousel>
                         <div class="carousel-slide active">
-                            <img src="santanu-das.png" alt="Surface">
-                            <div class="image-popup-tag">Surface Tumor Excision</div>
+                            <img src="Images/oculofacial trauma 1.jpeg" alt="Trauma">
+                            <div class="image-popup-tag">CT Scan Facial Fracture</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="Images/ChatGPT Image Jul 27, 2026, 07_53_38 PM.png" alt="Trauma">
+                            <div class="image-popup-tag">Orbital Floor Anatomy</div>
+                        </div>
+
+                         <div class="carousel-slide">
+                            <img src="Images/Periocular swelling post physical assault..jpeg"Trauma">
+                            <div class="image-popup-tag">Orbital Floor Anatomy</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Sub-section 2 (Image on Left) -->
-            <div class="condition-row alt-layout">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>2. Stevens-Johnson Syndrome & Pterygium</h4>
-                        <p>Reconstructive management including lid margin keratinization repair using buccal mucosal grafts, corrective entropion surgeries, and specialized pterygium excision.</p>
-                    </div>
-                </div>
-                <div class="condition-carousel-container">
-                    <div class="pure-image-carousel" data-carousel>
-                        <div class="carousel-slide active">
-                            <img src="santanu-das.png" alt="Surface">
-                            <div class="image-popup-tag">Stevens-Johnson Repair</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Sub-section 3 (Image on Right) -->
-            <div class="condition-row last-row">
-                <div class="condition-content">
-                    <div class="info-card">
-                        <h4>3. Complex Orbital, Lid & Lacrimal Tumors</h4>
-                        <p>Specialized lateral orbitotomy for deep orbital and lacrimal gland tumors coupled with custom lid excision and reconstruction protocols.</p>
-                    </div>
+            <!-- ========================================= -->
+            <!-- 7. OCULAR SURFACE DISORDERS & TUMORS -->
+            <!-- ========================================= -->
+            <div id="tumor" class="category-block">
+                <h3 class="category-heading">Ocular Surface Disorders & Tumors</h3>
+
+                <div class="info-card">
+                    <h4>1. Ocular Surface Lesions & Tumors</h4>
+                    <p>Wide excision of lesions like OSSN, dermoids, naevi, and papillomas using a strict no-touch technique combined with amniotic membrane graft (AMG).</p>
                 </div>
-                <div class="condition-carousel-container">
+                <div class="info-card">
+                    <h4>2. Stevens-Johnson Syndrome & Pterygium</h4>
+                    <p>Reconstructive management including lid margin keratinization repair using buccal mucosal grafts, corrective entropion surgeries, and specialized pterygium excision.</p>
+                </div>
+                <div class="info-card">
+                    <h4>3. Complex Orbital, Lid & Lacrimal Tumors</h4>
+                    <p>Specialized lateral orbitotomy for deep orbital and lacrimal gland tumors coupled with custom lid excision and reconstruction protocols.</p>
+                </div>
+
+                <div class="section-image-row">
                     <div class="pure-image-carousel" data-carousel>
                         <div class="carousel-slide active">
-                            <img src="santanu-das.png" alt="Surface">
-                            <div class="image-popup-tag">Lateral Orbitotomy</div>
+                            <img src="santanu-das.png" alt="Tumors">
+                            <div class="image-popup-tag">Tumor Excision & Reconstruction</div>
                         </div>
                     </div>
                 </div>
@@ -466,6 +347,19 @@
 
     </main>
 
+    <!-- IMAGE LIGHTBOX MODAL POPUP -->
+    <div id="imageModal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content-wrapper">
+            <button class="lightbox-arrow lightbox-prev" id="lightboxPrev">&#10094;</button>
+            <div class="lightbox-img-container">
+                <img id="lightboxImg" src="" alt="Expanded View">
+                <div id="lightboxCaption" class="lightbox-caption"></div>
+            </div>
+            <button class="lightbox-arrow lightbox-next" id="lightboxNext">&#10095;</button>
+        </div>
+    </div>
+
     <!-- FOOTER & COPYRIGHT -->
     <footer class="main-footer">
         <p>&copy; 2026 Dr. Santanu Das. All rights reserved.</p>
@@ -474,6 +368,7 @@
 
     <script src="script.js"></script>
     <script>
+        // Automatic Carousel Rotator
         document.querySelectorAll('[data-carousel]').forEach(carousel => {
             const slides = carousel.querySelectorAll('.carousel-slide');
             if(slides.length <= 1) return;
@@ -484,6 +379,74 @@
                 slides[idx].classList.add('active');
             }, 4000);
         });
+
+        // Interactive Lightbox Modal Script with Navigation Arrows
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('lightboxImg');
+        const modalCaption = document.getElementById('lightboxCaption');
+        const closeBtn = document.querySelector('.lightbox-close');
+        const prevBtn = document.getElementById('lightboxPrev');
+        const nextBtn = document.getElementById('lightboxNext');
+
+        let currentCarouselSlides = [];
+        let currentIndex = 0;
+
+        document.querySelectorAll('.pure-image-carousel img').forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', (e) => {
+                const carousel = img.closest('[data-carousel]');
+                currentCarouselSlides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+                currentIndex = currentCarouselSlides.findIndex(slide => slide.contains(img));
+                
+                updateModalContent();
+                modal.style.display = 'flex';
+            });
+        });
+
+        function updateModalContent() {
+            const activeSlide = currentCarouselSlides[currentIndex];
+            const imgElement = activeSlide.querySelector('img');
+            const tagElement = activeSlide.querySelector('.image-popup-tag');
+
+            modalImg.src = imgElement.src;
+            modalCaption.textContent = tagElement ? tagElement.textContent : '';
+
+            if (currentCarouselSlides.length > 1) {
+                prevBtn.style.display = 'block';
+                nextBtn.style.display = 'block';
+            } else {
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+            }
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + currentCarouselSlides.length) % currentCarouselSlides.length;
+            updateModalContent();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % currentCarouselSlides.length;
+            updateModalContent();
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (modal.style.display === 'flex') {
+                if (e.key === 'Escape') modal.style.display = 'none';
+                if (e.key === 'ArrowLeft' && currentCarouselSlides.length > 1) prevBtn.click();
+                if (e.key === 'ArrowRight' && currentCarouselSlides.length > 1) nextBtn.click();
+            }
+        });
     </script>
     
     <style>
@@ -491,7 +454,7 @@
 
         .content-section {
             padding: 6rem 5% 4rem;
-            max-width: 1400px;
+            max-width: 1000px;
             margin: 0 auto;
             width: 100%;
         }
@@ -525,9 +488,13 @@
         .category-heading {
             font-size: clamp(1.6rem, 3vw, 2.2rem);
             color: var(--primary-color);
-            margin: 4rem 0 2rem;
+            margin: 0 0 1.5rem;
             border-left: 6px solid var(--secondary-color);
             padding-left: 1rem;
+        }
+
+        .category-block {
+            margin-bottom: 4rem;
             scroll-margin-top: 100px;
         }
 
@@ -541,6 +508,7 @@
             box-shadow: 0 10px 30px rgba(13, 42, 74, 0.08);
             border: 1px solid rgba(255, 255, 255, 0.5);
             width: 100%;
+            margin-bottom: 1.5rem;
         }
 
         .info-card h4 {
@@ -556,34 +524,14 @@
             transition: color 0.3s;
             color: var(--text-dark, #333);
         }
-        
-        .condition-row {
-            display: grid;
-            grid-template-columns: 1fr 450px;
-            gap: 4rem;
-            align-items: center;
-            margin-bottom: 4rem;
-            width: 100%;
-        }
-        .condition-row.last-row {
-            margin-bottom: 2rem;
-        }
-        .condition-row.alt-layout {
-            grid-template-columns: 450px 1fr;
-        }
-        .condition-row.alt-layout .condition-content {
-            order: 2;
-        }
-        .condition-row.alt-layout .condition-carousel-container {
-            order: 1;
-        }
 
-        .condition-carousel-container {
+        .section-image-row {
             position: relative;
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-top: 2rem;
         }
         
         .pure-image-carousel {
@@ -591,8 +539,7 @@
             overflow: hidden;
             border-radius: 15px;
             width: 100%;
-            max-width: 450px;
-            height: 280px;
+            height: 350px;
             box-shadow: 0 15px 35px rgba(13, 42, 74, 0.12);
         }
         
@@ -614,6 +561,11 @@
             object-position: center;
             border-radius: 15px;
             background-color: #f8fafc;
+            transition: transform 0.3s;
+        }
+
+        .carousel-slide img:hover {
+            transform: scale(1.02);
         }
 
         .image-popup-tag {
@@ -633,24 +585,97 @@
             z-index: 5;
         }
 
+        /* LIGHTBOX MODAL STYLING */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-content-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 90vw;
+            max-height: 85vh;
+        }
+
+        .lightbox-img-container {
+            position: relative;
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            max-width: 800px;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .lightbox-img-container img {
+            max-width: 760px;
+            max-height: 65vh;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .lightbox-caption {
+            margin-top: 10px;
+            background: var(--primary-color, #0d2a4a);
+            color: #ffffff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 1010;
+        }
+
+        .lightbox-close:hover {
+            color: var(--secondary-color);
+        }
+
+        .lightbox-arrow {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            font-size: 2.5rem;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin: 0 20px;
+            transition: background 0.3s;
+            z-index: 1010;
+            outline: none;
+        }
+
+        .lightbox-arrow:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
         @keyframes popupBounce {
             0% { transform: translateY(15px); opacity: 0; }
             100% { transform: translateY(0); opacity: 1; }
-        }
-
-        @media (max-width: 1024px) {
-            .condition-row, .condition-row.alt-layout {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .condition-row.alt-layout .condition-content,
-            .condition-row.alt-layout .condition-carousel-container {
-                order: unset;
-            }
-            .pure-image-carousel {
-                max-width: 100%;
-                height: 320px;
-            }
         }
 
         @media (max-width: 768px) {
@@ -666,6 +691,15 @@
             }
             .pure-image-carousel {
                 height: 250px;
+            }
+            .lightbox-img-container img {
+                max-width: 85vw;
+                max-height: 55vh;
+            }
+            .lightbox-arrow {
+                font-size: 1.5rem;
+                padding: 5px 12px;
+                margin: 0 5px;
             }
         }
     </style>
