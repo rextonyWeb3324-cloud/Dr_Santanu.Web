@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements & Awards | Dr. Santanu Das</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 5% 5rem;
+        }
+
+        .achievement-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(13, 42, 74, 0.08);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(23, 101, 201, 0.15);
+        }
+
+        .achievement-img-container {
+            width: 100%;
+            height: 250px;
+            background-color: #f8fafc;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .achievement-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .achievement-card:hover .achievement-img-container img {
+            transform: scale(1.05);
+        }
+
+        .achievement-content {
+            padding: 2rem;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .achievement-content h3 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .achievement-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .achievement-badge {
+            display: inline-block;
+            background: rgba(23, 101, 201, 0.1);
+            color: var(--secondary-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            align-self: flex-start;
+        }
+
+        /* LIGHTBOX MODAL STYLING */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-content-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 90vw;
+            max-height: 85vh;
+        }
+
+        .lightbox-img-container {
+            position: relative;
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            max-width: 850px;
+            max-height: 82vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .lightbox-img-container img {
+            max-width: 800px;
+            max-height: 68vh;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .lightbox-caption {
+            margin-top: 12px;
+            background: var(--primary-color, #0d2a4a);
+            color: #ffffff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 2010;
+        }
+
+        .lightbox-close:hover {
+            color: var(--secondary-color);
+        }
+
+        .lightbox-arrow {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            font-size: 2.5rem;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin: 0 20px;
+            transition: background 0.3s;
+            z-index: 2010;
+            outline: none;
+        }
+
+        .lightbox-arrow:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .lightbox-img-container img {
+                max-width: 85vw;
+                max-height: 55vh;
+            }
+            .lightbox-arrow {
+                font-size: 1.5rem;
+                padding: 5px 12px;
+                margin: 0 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Animation -->
+    <div class="background-animation">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <a href="index.html" style="text-decoration: none;">
+            <h1 class="logo">Dr. Santanu Das</h1>
+        </a>
+    </header>
+
+    <!-- Left-Side Sliding Dropdown Menu with Patient Info Sub-menu -->
+    <nav class="dropdown-menu-left" id="dropdown-menu">
+        <ul class="menu-list">
+            
+            <li class="menu-item">
+                <a href="index.html" class="menu-link">Home</a>
+            </li>
+
+            <li class="menu-item">
+                <a href="profile.html#expertise" class="menu-link">Core Expertise</a>
+            </li>
+
+            <li class="menu-item">
+                <a href="achievement.html" class="menu-link" style="color: var(--secondary-color);">Achievements & Awards</a>
+            </li>
+
+            <!-- Patient Information Accordion Tab inside Menu -->
+            <li class="menu-item has-submenu">
+                <div class="menu-link submenu-toggle" id="patient-info-toggle">Patient Information <span class="arrow">▼</span></div>
+                <ul class="submenu" id="patient-info-submenu">
+                    <li><a href="conditions-treatment.html#ptosis">Ptosis Management</a></li>
+                    <li><a href="conditions-treatment.html#ectropion-entropion">Ectropion & Entropion</a></li>
+                    <li><a href="conditions-treatment.html#aesthetics">Cosmetic Lid Procedures</a></li>
+                    <li><a href="conditions-treatment.html#orbit">Orbit & Socket Problems</a></li>
+                    <li><a href="conditions-treatment.html#thyroid">Thyroid Eye Disease</a></li>
+                    <li><a href="conditions-treatment.html#socket">Socket Reconstruction</a></li>
+                    <li><a href="conditions-treatment.html#tearduct">Epiphora (Watering)</a></li>
+                    <li><a href="conditions-treatment.html#trauma">Oculofacial Trauma</a></li>
+                    <li><a href="conditions-treatment.html#tumor">Surface Disorders & Tumors</a></li>
+                </ul>
+            </li>
+            
+            <li class="menu-item">
+                <a href="media-press.html" class="menu-link">Media & Press</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="gallery.html" class="menu-link">Clinical Gallery</a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="contact.html" class="menu-link">Contact</a>
+            </li>
+            
+             <li class="menu-item">
+                <a href="achievement.html" class="menu-link">Achievements & Awards</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Floating Back Button -->
+    <a href="#" onclick="history.back(); return false;" class="floating-back-btn" title="Go Back">&#8592;</a>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        
+        <!-- Page Header -->
+        <section style="padding-top: 6rem; text-align: center; padding-bottom: 1rem;">
+            <h2 class="section-title" style="margin-bottom: 0.75rem;">Achievements & Honors</h2>
+            <div class="title-divider"></div>
+            <p style="max-width: 700px; margin: 0 auto; color: var(--text-muted); font-size: 1.1rem; padding: 0 5%; line-height: 1.6;">
+                Recognitions, academic milestones, and certifications honoring specialized training in orbital, oculoplastic, and reconstructive surgery. Click any image to view it in full size.
+            </p>
+        </section>
+
+        <!-- Multiple Image Containers Grid -->
+        <div class="achievements-grid">
+            
+            <!-- NEW: World Congress of Ocular Trauma E-Poster Winner -->
+            <div class="achievement-card">
+                <div class="achievement-img-container">
+                    <img src="Images/world congress of ocular trauma.jpeg" alt="World Congress of Ocular Trauma Winner" data-caption="Winner of E-Poster Competition (Oculoplasty & Neuro-Ophthalmology) at World Congress of Ocular Trauma, New Delhi (2019)">
+                </div>
+                <div class="achievement-content">
+                    <span class="achievement-badge">Winner Award</span>
+                    <h3>World Congress of Ocular Trauma</h3>
+                    <p>Declared the WINNER of the E-Poster competition (Oculoplasty & Neuro-Ophthalmology) at the World Congress of Ocular Trauma held at Le Meridien, New Delhi (December 2019).</p>
+                </div>
+            </div>
+
+            <!-- NEW: Cybersight Ptosis 101 Certificate -->
+            <div class="achievement-card">
+                <div class="achievement-img-container">
+                    <img src="Images/v3 Cybersight Certificate 2026.png" alt="Cybersight Ptosis 101 Certificate" data-caption="Certificate of Professional Development: Ptosis 101 - Evaluation and Management (1-Hour Webinar) by Cybersight[cite: 2]">
+                </div>
+                <div class="achievement-content">
+                    <span class="achievement-badge">Professional Development</span>
+                    <h3>Cybersight - Ptosis 101</h3>
+                    <p>Awarded for completion of Ptosis 101: Evaluation and Management (1-Hour Webinar) by Dr. Daniel Neely, Professor of Ophthalmology, Indiana University School of Medicine[cite: 2].</p>
+                </div>
+            </div>
+
+            <!-- NEW: Cybersight Neurofibromatosis 1 Certificate -->
+            <div class="achievement-card">
+                <div class="achievement-img-container">
+                    <img src="Images/v3 Cybersight Certificate 2026 (1).png" alt="Cybersight Neurofibromatosis 1 Certificate" data-caption="Certificate of Professional Development: Neurofibromatosis 1: An Update on Screening and Management (1.5-Hour Webinar) by Cybersight[cite: 1]">
+                </div>
+                <div class="achievement-content">
+                    <span class="achievement-badge">Professional Development</span>
+                    <h3>Cybersight - Neurofibromatosis 1</h3>
+                    <p>Awarded for completion of Neurofibromatosis 1: An Update on Screening and Management (1.5-Hour Webinar) certified by Cybersight[cite: 1].</p>
+                </div>
+            </div>
+
+            <!-- Card 1: Siriraj Fellowship -->
+           <!-- Card 1: Siriraj Fellowship (With Carousel Animation) -->
+            <div class="achievement-card">
+                <div class="achievement-img-container">
+                    <div class="pure-image-carousel" data-carousel>
+                        <div class="carousel-slide active">
+                            <img src="Images/award 1.jpg" alt="Siriraj Hospital Fellowship" data-caption="Mahidol University, Bangkok - Clinical Fellowship in Orbital and Ophthalmic Plastic Surgery">
+                            <div class="image-popup-tag">View 1</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="Images/M.d certificate surgery.jpeg" alt="Siriraj Hospital Fellowship" data-caption="Mahidol University, Bangkok - Clinical Fellowship in Orbital and Ophthalmic Plastic Surgery">
+                            <div class="image-popup-tag">View 2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-content">
+                    <span class="achievement-badge">International Fellowship</span>
+                    <h3>Mahidol University, Bangkok, Thailand</h3>
+                    <p>Successfully completed the Clinical Fellowship Training Program in Orbital and Ophthalmic Plastic and Reconstructive Surgery at Faculty of Medicine Siriraj Hospital (July 2025 – June 2026).</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Best Oculoplasty Free Paper Award -->
+            <div class="achievement-card">
+                <div class="achievement-img-container">
+                    <img src="Images/Postero medial canthal thermoplasty.jpeg" alt="Best Oculoplasty Free Paper Award" data-caption="Best Oculoplasty & Ocular Oncology Free Paper Award - Karnataka Ophthalmic Society (2022)">
+                </div>
+                <div class="achievement-content">
+                    <span class="achievement-badge">Award</span>
+                    <h3>Best Oculoplasty & Ocular Oncology Paper</h3>
+                    <p>Awarded by the Karnataka Ophthalmic Society for the paper titled "Postero medial canthal thermoplasty in the management of long-standing facial Nerve Palsy" (Dec 2022).</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Sankara Academy Fellowship -->
+            <div class="achievement-card">
+                <div class="achievement-img-container">
+                    <img src="Images/fellowship.jpeg" alt="Fellowship Sankara" data-caption="Fellowship in Orbit and Oculoplasty - Sankara Academy of Vision (2020 – 2022)">
+                </div>
+                <div class="achievement-content">
+                    <span class="achievement-badge">Fellowship</span>
+                    <h3>Orbit and Oculoplasty Fellowship</h3>
+                    <p>Conferred by Sankara Academy of Vision (Sankara Eye Foundation - India) after attaining proficiency from January 2020 to January 2022 at Sankara Eye Hospital, Bangalore.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: APSOPRS Cadaveric Course -->
+            <div class="achievement-card">
+                <div class="achievement-img-container">
+                    <img src="Images/hands on cadaveric.jpeg" alt="Hands-on Cadaveric Dissection" data-caption="Masterclass in Orbital Surgery: Hands-on Cadaveric Dissection Course - APSOPRS & NESOS, Nepal (2026)">
+                </div>
+                <div class="achievement-content">
+                    <span class="achievement-badge">Masterclass Certificate</span>
+                    <h3>APSOPRS & NESOS Masterclass</h3>
+                    <p>Completed the Masterclass in Orbital Surgery "Hands-on Cadaveric Dissection Course" conducted by APSOPRS and NESOS at Dhulikhel Hospital, Nepal (May 2026).</p>
+                </div>
+            </div>
+
+            <!-- Card 5: AO CMF Seminar -->
+            <div class="achievement-card">
+                <div class="achievement-img-container">
+                    <img src="Images/Certificate of midface and orbit reconstruction in primary and secondary deformities.jpeg" alt="AO CMF Seminar" data-caption="AO CMF Seminar - Midface and Orbit Reconstruction in Primary and Secondary Deformities, Philippines (2025)">
+                </div>
+                <div class="achievement-content">
+                    <span class="achievement-badge">Course Certificate</span>
+                    <h3>AO CMF Seminar - Midface & Orbit Reconstruction</h3>
+                    <p>Attended and completed training on Midface and Orbit Reconstruction in Primary and Secondary Deformities held in Quezon City, Philippines (Nov 2025).</p>
+                </div>
+            </div>
+
+            <!-- Card 6: Ocular TraumaCON -->
+            <div class="achievement-card">
+                <div class="achievement-img-container">
+                    <img src="Images/trauma con 2019 1.jpeg" alt="Ocular TraumaCON" data-caption="Faculty / Delegate Recognition - Ocular TraumaCON 2018, Chennai">
+                </div>
+                <div class="achievement-content">
+                    <span class="achievement-badge">Faculty / Delegate</span>
+                    <h3>Ocular TraumaCON 2018</h3>
+                    <p>Recognized for significant contribution as Faculty / Delegate at Ocular TraumaCON 2018 held at ITC Grand Chola, Chennai, granted by The Tamil Nadu Dr. MGR Medical University.</p>
+                </div>
+            </div>
+
+            <!-- Card 7: KOSCON 2019 Paper 1 -->
+            <div class="achievement-card">
+                <div class="achievement-img-container">
+                    <img src="Images/koscon 2019 1.jpeg" alt="KOSCON 2019 Orbital Implants" data-caption="Free Paper Presentation on Orbital Implants - KOSCON 2019, Belagavi">
+                </div>
+                <div class="achievement-content">
+                    <span class="achievement-badge">Free Paper Presentation</span>
+                    <h3>KOSCON 2019 - Belagavi</h3>
+                    <p>Presented free paper on "Methodology of choice of orbital implants in orbital fractures management" at the 38th Karnataka State Ophthalmic Conference (Nov 2019).</p>
+                </div>
+            </div>
+
+            <!-- Card 8: KOSCON 2019 Paper 2 -->
+            <div class="achievement-card">
+                <div class="achievement-img-container">
+                    <img src="Images/koscon 2019 2.jpeg" alt="KOSCON 2019 OSSN" data-caption="Free Paper Presentation on OSSN - KOSCON 2019, Belagavi">
+                </div>
+                <div class="achievement-content">
+                    <span class="achievement-badge">Free Paper Presentation</span>
+                    <h3>KOSCON 2019 - Belagavi</h3>
+                    <p>Presented free paper on "Spectrum of Ocular Surface Squamous Neoplasia (OSSN) and its management - a case series" at KOSCON 2019 (Nov 2019).</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- LIGHTBOX MODAL POPUP -->
+    <div id="imageModal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content-wrapper">
+            <button class="lightbox-arrow lightbox-prev" id="lightboxPrev">&#10094;</button>
+            <div class="lightbox-img-container">
+                <img id="lightboxImg" src="" alt="Expanded Award View">
+                <div id="lightboxCaption" class="lightbox-caption"></div>
+            </div>
+            <button class="lightbox-arrow lightbox-next" id="lightboxNext">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Dr. Santanu Das. All rights reserved.</p>
+        <p class="creator-credits">Created by Aniket Sarkar</p>
+    </footer>
+
+    <!-- Global Navigation & Menu Script -->
+    <script src="script.js"></script>
+    <script>
+        // Lightbox Modal Navigation Script for Achievement Cards
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('lightboxImg');
+        const modalCaption = document.getElementById('lightboxCaption');
+        const closeBtn = document.querySelector('.lightbox-close');
+        const prevBtn = document.getElementById('lightboxPrev');
+        const nextBtn = document.getElementById('lightboxNext');
+
+        const achievementImages = document.querySelectorAll('.achievement-img-container img');
+        let currentIndex = 0;
+
+        achievementImages.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentIndex = index;
+                updateLightboxContent();
+                modal.style.display = 'flex';
+            });
+        });
+
+        function updateLightboxContent() {
+            const currentImg = achievementImages[currentIndex];
+            modalImg.src = currentImg.src;
+            modalCaption.textContent = currentImg.getAttribute('data-caption') || currentImg.alt;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + achievementImages.length) % achievementImages.length;
+            updateLightboxContent();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % achievementImages.length;
+            updateLightboxContent();
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (modal.style.display === 'flex') {
+                if (e.key === 'Escape') modal.style.display = 'none';
+                if (e.key === 'ArrowLeft') prevBtn.click();
+                if (e.key === 'ArrowRight') nextBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>
