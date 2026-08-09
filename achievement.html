@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achievements & Awards | Dr. Santanu Das</title>
+    <title>Achievements & Publications | Dr. Santanu Das</title>
     <link rel="stylesheet" href="style.css">
     
     <style>
@@ -83,6 +83,71 @@
             font-weight: 600;
             margin-bottom: 1rem;
             align-self: flex-start;
+        }
+
+        /* Publications Section Styling */
+        .publications-container {
+            max-width: 1200px;
+            margin: 0 auto 5rem;
+            padding: 0 5%;
+        }
+
+        .publications-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 15px 35px rgba(13, 42, 74, 0.08);
+        }
+
+        .publications-card h3 {
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            padding-left: 1rem;
+        }
+
+        .publication-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .publication-list li {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+            margin-bottom: 1.25rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid rgba(13, 42, 74, 0.06);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .publication-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .pub-number {
+            font-weight: 700;
+            color: var(--secondary-color);
+            min-width: 2rem;
+            margin-right: 0.5rem;
+        }
+
+        .pub-text {
+            flex-grow: 1;
+        }
+
+        .conference-note {
+            margin-top: 2rem;
+            font-style: italic;
+            color: var(--text-dark);
+            font-weight: 500;
+            text-align: center;
         }
 
         /* LIGHTBOX MODAL STYLING */
@@ -229,20 +294,18 @@
                 <div class="menu-link submenu-toggle" id="patient-info-toggle">Patient Information <span class="arrow">▼</span></div>
                 <ul class="submenu" id="patient-info-submenu">
                     <li><a href="conditions-treatment.html#ptosis">Ptosis Management</a></li>
+                    <li><a href="conditions-treatment.html#socket">Socket Reconstruction</a></li>
                     <li><a href="conditions-treatment.html#ectropion-entropion">Ectropion & Entropion</a></li>
                     <li><a href="conditions-treatment.html#aesthetics">Cosmetic Lid Procedures</a></li>
                     <li><a href="conditions-treatment.html#orbit">Orbit & Socket Problems</a></li>
                     <li><a href="conditions-treatment.html#thyroid">Thyroid Eye Disease</a></li>
-                    <li><a href="conditions-treatment.html#socket">Socket Reconstruction</a></li>
                     <li><a href="conditions-treatment.html#tearduct">Epiphora (Watering)</a></li>
                     <li><a href="conditions-treatment.html#trauma">Oculofacial Trauma</a></li>
-                    <li><a href="conditions-treatment.html#tumor">Surface Disorders & Tumors</a></li>
+                    <li><a href="conditions-treatment.html#tumor">LID Disorders & Tumors</a></li>
                 </ul>
             </li>
             
-            <li class="menu-item">
-                <a href="media-press.html" class="menu-link">Media & Press</a>
-            </li>
+           
             
             <li class="menu-item">
                 <a href="gallery.html" class="menu-link">Clinical Gallery</a>
@@ -251,8 +314,6 @@
             <li class="menu-item">
                 <a href="contact.html" class="menu-link">Contact</a>
             </li>
-            
-            
         </ul>
     </nav>
 
@@ -264,54 +325,79 @@
         
         <!-- Page Header -->
         <section style="padding-top: 6rem; text-align: center; padding-bottom: 1rem;">
-            <h2 class="section-title" style="margin-bottom: 0.75rem;">Achievements & Honors</h2>
+            <h2 class="section-title" style="margin-bottom: 0.75rem;">Achievements & Publications</h2>
             <div class="title-divider"></div>
             <p style="max-width: 700px; margin: 0 auto; color: var(--text-muted); font-size: 1.1rem; padding: 0 5%; line-height: 1.6;">
-                Recognitions, academic milestones, and certifications honoring specialized training in orbital, oculoplastic, and reconstructive surgery. Click any image to view it in full size.
+                Recognitions, academic milestones, research publications, and certifications honoring specialized training in orbital, oculoplastic, and reconstructive surgery. Click any image to view it in full size.
             </p>
         </section>
 
         <!-- Multiple Image Containers Grid -->
         <div class="achievements-grid">
             
-            <!-- NEW: World Congress of Ocular Trauma E-Poster Winner -->
+            <!-- World Congress of Ocular Trauma E-Poster Winner -->
             <div class="achievement-card">
                 <div class="achievement-img-container">
-                    <img src="Images/world congress of ocular trauma.jpeg" alt="World Congress of Ocular Trauma Winner" data-caption="Winner of E-Poster Competition (Oculoplasty & Neuro-Ophthalmology) at World Congress of Ocular Trauma, New Delhi (2019)">
+                    <img src="Images/world congress of ocular trauma.jpeg" alt="World Congress of Ocular Trauma Winner" data-caption="Best Poster Award: Eyebrow reconstruction following trauma at World Congress of Ocular Trauma, New Delhi (December 2019)">
                 </div>
                 <div class="achievement-content">
-                    <span class="achievement-badge">Winner Award</span>
+                    <span class="achievement-badge">Best Poster Award</span>
                     <h3>World Congress of Ocular Trauma</h3>
-                    <p>Declared the WINNER of the E-Poster competition (Oculoplasty & Neuro-Ophthalmology) at the World Congress of Ocular Trauma held at Le Meridien, New Delhi (December 2019).</p>
+                    <p>Won the Best Poster Award for "Eyebrow reconstruction following trauma" at the World Congress of Ocular Trauma held in New Delhi (December 2019).</p>
                 </div>
             </div>
 
-            <!-- NEW: Cybersight Ptosis 101 Certificate -->
+            <!-- Best Oculoplasty Free Paper Award - KOSCON 2021 -->
             <div class="achievement-card">
                 <div class="achievement-img-container">
-                    <img src="Images/v3 Cybersight Certificate 2026.png" alt="Cybersight Ptosis 101 Certificate" data-caption="Certificate of Professional Development: Ptosis 101 - Evaluation and Management (1-Hour Webinar) by Cybersight[cite: 2]">
+                    <img src="Images/Postero medial canthal thermoplasty.jpeg" alt="Best Oculoplasty Free Paper Award" data-caption="Best Paper in Oculoplasty and Ocular Oncology - KOSCON 2021 Virtual Conference">
+                </div>
+                <div class="achievement-content">
+                    <span class="achievement-badge">Best Paper Award</span>
+                    <h3>KOSCON 2021</h3>
+                    <p>Awarded Best Paper in Oculoplasty and Ocular Oncology for "Postero-medial canthal Thermoplasty in the management of long-standing facial nerve palsy" at the KOSCON (Karnataka Ophthalmological Society Conference) 2021 virtual conference.</p>
+                </div>
+            </div>
+
+            
+
+            <!-- AIOS 2019 Col. Rangachari Award Session -->
+            <div class="achievement-card">
+                <div class="achievement-img-container">
+                    <img src="Images/koscon 2019 1.jpeg" alt="AIOS 2019 Free Paper Presentation" data-caption="Best Free Paper Award Session (Col. Rangachari Award) - AIOS 2019">
+                </div>
+                <div class="achievement-content">
+                    <span class="achievement-badge">Award Session Presentation</span>
+                    <h3>AIOS 2019</h3>
+                    <p>Presented "Methodology of choice of Orbital Implants in orbital fracture patients" in the prestigious best free paper award session (Col. Rangachari award) at AIOS 2019.</p>
+                </div>
+            </div>
+
+            <!-- Cybersight Ptosis 101 Certificate -->
+            <div class="achievement-card">
+                <div class="achievement-img-container">
+                    <img src="Images/v3 Cybersight Certificate 2026.png" alt="Cybersight Ptosis 101 Certificate" data-caption="Certificate of Professional Development: Ptosis 101 - Evaluation and Management (1-Hour Webinar) by Cybersight">
                 </div>
                 <div class="achievement-content">
                     <span class="achievement-badge">Professional Development</span>
                     <h3>Cybersight - Ptosis 101</h3>
-                    <p>Awarded for completion of Ptosis 101: Evaluation and Management (1-Hour Webinar) by Dr. Daniel Neely, Professor of Ophthalmology, Indiana University School of Medicine[cite: 2].</p>
+                    <p>Awarded for completion of Ptosis 101: Evaluation and Management (1-Hour Webinar) by Dr. Daniel Neely, Professor of Ophthalmology, Indiana University School of Medicine.</p>
                 </div>
             </div>
 
-            <!-- NEW: Cybersight Neurofibromatosis 1 Certificate -->
+            <!-- Cybersight Neurofibromatosis 1 Certificate -->
             <div class="achievement-card">
                 <div class="achievement-img-container">
-                    <img src="Images/v3 Cybersight Certificate 2026 (1).png" alt="Cybersight Neurofibromatosis 1 Certificate" data-caption="Certificate of Professional Development: Neurofibromatosis 1: An Update on Screening and Management (1.5-Hour Webinar) by Cybersight[cite: 1]">
+                    <img src="Images/v3 Cybersight Certificate 2026 (1).png" alt="Cybersight Neurofibromatosis 1 Certificate" data-caption="Certificate of Professional Development: Neurofibromatosis 1: An Update on Screening and Management (1.5-Hour Webinar) by Cybersight">
                 </div>
                 <div class="achievement-content">
                     <span class="achievement-badge">Professional Development</span>
                     <h3>Cybersight - Neurofibromatosis 1</h3>
-                    <p>Awarded for completion of Neurofibromatosis 1: An Update on Screening and Management (1.5-Hour Webinar) certified by Cybersight[cite: 1].</p>
+                    <p>Awarded for completion of Neurofibromatosis 1: An Update on Screening and Management (1.5-Hour Webinar) certified by Cybersight.</p>
                 </div>
             </div>
 
             <!-- Card 1: Siriraj Fellowship -->
-           <!-- Card 1: Siriraj Fellowship (With Carousel Animation) -->
             <div class="achievement-card">
                 <div class="achievement-img-container">
                     <div class="pure-image-carousel" data-carousel>
@@ -332,19 +418,7 @@
                 </div>
             </div>
 
-            <!-- Card 2: Best Oculoplasty Free Paper Award -->
-            <div class="achievement-card">
-                <div class="achievement-img-container">
-                    <img src="Images/Postero medial canthal thermoplasty.jpeg" alt="Best Oculoplasty Free Paper Award" data-caption="Best Oculoplasty & Ocular Oncology Free Paper Award - Karnataka Ophthalmic Society (2022)">
-                </div>
-                <div class="achievement-content">
-                    <span class="achievement-badge">Award</span>
-                    <h3>Best Oculoplasty & Ocular Oncology Paper</h3>
-                    <p>Awarded by the Karnataka Ophthalmic Society for the paper titled "Postero medial canthal thermoplasty in the management of long-standing facial Nerve Palsy" (Dec 2022).</p>
-                </div>
-            </div>
-
-            <!-- Card 3: Sankara Academy Fellowship -->
+            <!-- Sankara Academy Fellowship -->
             <div class="achievement-card">
                 <div class="achievement-img-container">
                     <img src="Images/fellowship.jpeg" alt="Fellowship Sankara" data-caption="Fellowship in Orbit and Oculoplasty - Sankara Academy of Vision (2020 – 2022)">
@@ -356,7 +430,7 @@
                 </div>
             </div>
 
-            <!-- Card 4: APSOPRS Cadaveric Course -->
+            <!-- APSOPRS Cadaveric Course -->
             <div class="achievement-card">
                 <div class="achievement-img-container">
                     <img src="Images/hands on cadaveric.jpeg" alt="Hands-on Cadaveric Dissection" data-caption="Masterclass in Orbital Surgery: Hands-on Cadaveric Dissection Course - APSOPRS & NESOS, Nepal (2026)">
@@ -368,7 +442,7 @@
                 </div>
             </div>
 
-            <!-- Card 5: AO CMF Seminar -->
+            <!-- AO CMF Seminar -->
             <div class="achievement-card">
                 <div class="achievement-img-container">
                     <img src="Images/Certificate of midface and orbit reconstruction in primary and secondary deformities.jpeg" alt="AO CMF Seminar" data-caption="AO CMF Seminar - Midface and Orbit Reconstruction in Primary and Secondary Deformities, Philippines (2025)">
@@ -380,7 +454,7 @@
                 </div>
             </div>
 
-            <!-- Card 6: Ocular TraumaCON -->
+            <!-- Ocular TraumaCON -->
             <div class="achievement-card">
                 <div class="achievement-img-container">
                     <img src="Images/trauma con 2019 1.jpeg" alt="Ocular TraumaCON" data-caption="Faculty / Delegate Recognition - Ocular TraumaCON 2018, Chennai">
@@ -392,19 +466,7 @@
                 </div>
             </div>
 
-            <!-- Card 7: KOSCON 2019 Paper 1 -->
-            <div class="achievement-card">
-                <div class="achievement-img-container">
-                    <img src="Images/koscon 2019 1.jpeg" alt="KOSCON 2019 Orbital Implants" data-caption="Free Paper Presentation on Orbital Implants - KOSCON 2019, Belagavi">
-                </div>
-                <div class="achievement-content">
-                    <span class="achievement-badge">Free Paper Presentation</span>
-                    <h3>KOSCON 2019 - Belagavi</h3>
-                    <p>Presented free paper on "Methodology of choice of orbital implants in orbital fractures management" at the 38th Karnataka State Ophthalmic Conference (Nov 2019).</p>
-                </div>
-            </div>
-
-            <!-- Card 8: KOSCON 2019 Paper 2 -->
+            <!-- KOSCON 2019 Paper 2 (OSSN) -->
             <div class="achievement-card">
                 <div class="achievement-img-container">
                     <img src="Images/koscon 2019 2.jpeg" alt="KOSCON 2019 OSSN" data-caption="Free Paper Presentation on OSSN - KOSCON 2019, Belagavi">
@@ -416,6 +478,52 @@
                 </div>
             </div>
 
+        </div>
+
+        <!-- Publications Section -->
+        <div class="publications-container">
+            <div class="publications-card">
+                <h3>Publications</h3>
+                <ul class="publication-list">
+                    <li>
+                        <span class="pub-number">1.</span>
+                        <span class="pub-text">Das S, Nagesh N, Hegde R. Reconstructing the socket. Sudanese J Ophthalmol 2019;11: 62-4.</span>
+                    </li>
+                    <li>
+                        <span class="pub-number">2.</span>
+                        <span class="pub-text">Das S, Vidhya C. Profile of Presenile Cataract in Karnataka. EC Ophthalmology 12.7 (2021):44-51.</span>
+                    </li>
+                    <li>
+                        <span class="pub-number">3.</span>
+                        <span class="pub-text">Das S, Nagesh N, Hegde R. Pattern causes and management of eyelid and adnexal injuries in a tertiary hospital. Int J Ocul Oncol Oculoplasty 2019;5(3):112-7.</span>
+                    </li>
+                    <li>
+                        <span class="pub-number">4.</span>
+                        <span class="pub-text">Das S, Nagesh N, Hegde R. Ocular surface squamous neoplasia. Current Indian Eye Research 2019; 6:4-16.</span>
+                    </li>
+                    <li>
+                        <span class="pub-number">5.</span>
+                        <span class="pub-text">Das S, Kumar L K. Comparative study of intraocular pressure measured by non-contact, rebound and Goldmann applanation tonometer and their correlation with corneal thickness and true IOP in a general population. Indian J Clin Exp Ophthalmol 2020;6(1):41-49.</span>
+                    </li>
+                    <li>
+                        <span class="pub-number">6.</span>
+                        <span class="pub-text">Das S, Hegde R. Methodology of Choice of Orbital Implants and Surgical Outcomes in Orbital Fracture Patients, ARC Journal of Ophthalmology 2019;4(2):16-25.</span>
+                    </li>
+                    <li>
+                        <span class="pub-number">7.</span>
+                        <span class="pub-text">Das S, Kumar LK. Comparative study of intraocular pressure measured by non-contact, rebound and Goldmann applanation tonometer and their correlation with corneal thickness in a general population. EJBPS. 2019; 6(11):227-235.</span>
+                    </li>
+                    <li>
+                        <span class="pub-number">8.</span>
+                        <span class="pub-text">Contributing author in a multicentric study on mucormycosis. Epidemiology, clinical profile, management, and outcome of COVID 19 associated rhino orbital cerebral mucormycosis in 2826 patients in India Collaborative OPAI IJO Study on Mucormycosis.</span>
+                    </li>
+                    <li>
+                        <span class="pub-number">9.</span>
+                        <span class="pub-text">Das S, Rambhatla S. Targeted Therapy in Orbital and Periocular Disorders: A Review. Journal of Vision Sciences 2024; 3(1):19-30.</span>
+                    </li>
+                </ul>
+               
+            </div>
         </div>
 
     </main>
@@ -442,6 +550,18 @@
     <!-- Global Navigation & Menu Script -->
     <script src="script.js"></script>
     <script>
+        // Automatic Carousel Rotator for multi-image cards
+        document.querySelectorAll('[data-carousel]').forEach(carousel => {
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            if(slides.length <= 1) return;
+            let idx = 0;
+            setInterval(() => {
+                slides[idx].classList.remove('active');
+                idx = (idx + 1) % slides.length;
+                slides[idx].classList.add('active');
+            }, 4000);
+        });
+
         // Lightbox Modal Navigation Script for Achievement Cards
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('lightboxImg');
@@ -454,6 +574,7 @@
         let currentIndex = 0;
 
         achievementImages.forEach((img, index) => {
+            img.style.cursor = 'pointer';
             img.addEventListener('click', () => {
                 currentIndex = index;
                 updateLightboxContent();
