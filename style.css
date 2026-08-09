@@ -190,6 +190,16 @@ main {
     border-bottom: 2px solid var(--secondary-color); 
     padding-bottom: 0.5rem; 
     display: inline-block;
+    translate: translatex(-15px);
+}
+
+.education-card-box {
+    transform: translateX(-150px); /* Keeps it shifted left */
+    background: transparent;      /* Removes the white background entirely */
+    backdrop-filter: none;        /* Removes the blur effect */
+    -webkit-backdrop-filter: none;
+    border: none;                 /* Removes the outline border */
+    box-shadow: none;             /* Removes the shadow if you want it entirely flat and clear */
 }
 
 /* =========================================
