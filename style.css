@@ -300,6 +300,9 @@ main {
     .creative-frame { height: 380px; max-width: 300px; margin: 0 auto; }
     .glass-card, .hero-text-box { padding: 2rem; }
     .main-footer { flex-direction: column; text-align: center; padding: 2rem 1.5rem; margin: auto 5% 1.5rem 5%; border-radius: 15px; }
+    
+    /* ADD THIS LINE HERE TO RESET SHIFTS ON MOBILE */
+    .education-card-box, .main-content-box { transform: translateX(0); }
 }
 
 /* Prevent sliding menu flash on page load/save */
