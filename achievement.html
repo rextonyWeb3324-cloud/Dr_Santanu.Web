@@ -541,14 +541,39 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <p>&copy; 2026 Dr. Santanu Das. All rights reserved.</p>
-        <p class="creator-credits">Created by Aniket Sarkar</p>
-    </footer>
+   <!-- FOOTER & COPYRIGHT -->
+<footer class="main-footer">
+    <p>&copy; 2026 Dr. Santanu Das. All rights reserved.</p>
+    <p>
+        <span id="disclaimer-link" class="footer-legal-link">Disclaimer & Copyright</span>
+    </p>
+    <p class="creator-credits">Created by Aniket Sarkar</p>
+</footer>
 
-    <!-- Global Navigation & Menu Script -->
-    <script src="script.js"></script>
+<!-- DISCLAIMER & COPYRIGHT MODAL POPUP -->
+<div id="legalModal" class="legal-modal">
+    <div class="legal-modal-content">
+        <span class="legal-close" id="legalClose">&times;</span>
+        <h2>Disclaimer & Copyright Information</h2>
+        
+        <h3>Website Disclaimer</h3>
+        <p>The content provided on this website—including all text, graphics, clinical images, and materials—is intended strictly for educational and informational purposes only and should not be construed as professional medical advice, diagnosis, or treatment.</p>
+        <ul>
+            <li><strong>Not Medical Advice:</strong> The information presented on this site is not a substitute for professional medical consultation, diagnosis, or treatment by a qualified healthcare provider.</li>
+            <li><strong>No Doctor-Patient Relationship:</strong> Accessing, browsing, or interacting with the information on this website does not establish a physician-patient relationship between you and Dr. Santanu Das.</li>
+            <li><strong>Professional Consultation:</strong> Always seek the direct advice of your physician, ophthalmologist, or qualified medical specialist regarding any questions or concerns you may have about a medical condition or procedural option.</li>
+        </ul>
+
+        <h3 style="margin-top: 1.5rem;">Copyright Notice</h3>
+        <p>&copy; 2026 Dr. Santanu Das. All rights reserved.</p>
+        <ul>
+            <li><strong>Intellectual Property Rights:</strong> All content, website design, text, layout, clinical imagery, and visual media featured on this site are the exclusive property of Dr. Santanu Das unless otherwise stated.</li>
+            <li><strong>Restricted Use:</strong> No part of this website, including its text, design elements, or medical case images, may be reproduced, distributed, modified, or transmitted in any form without prior express written permission.</li>
+            <li><strong>Attribution:</strong> Web development and architecture created by Aniket Sarkar.</li>
+        </ul>
+    </div>
+</div>
+<script src="script.js"></script>
     <script>
         // Automatic Carousel Rotator for multi-image cards
         document.querySelectorAll('[data-carousel]').forEach(carousel => {
