@@ -8,31 +8,37 @@
 
     <!-- Put your CSS here inside style tags -->
     <style>
-        .page-bg-overlay {
-    position: absolute;
-    top: 0%;
-    left: 0;
-    width: 100vw;
-    height: 325%;
-    z-index: -999;
-    pointer-events: none;
-}
+        html {
+            height: 100%;
+        }
 
-.page-bg-overlay img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(50%); /* Keeps it black and white */
-    opacity: 0.25; /* Adjust opacity as needed */
-}
+        body {
+            min-height: 100%;
+            margin: 0;
+            position: relative;
+        }
+
+        .page-bg-overlay {
+            position: absolute; /* Moves naturally with scroll */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; /* Matches the exact document height down to the footer */
+            background-image: url('Images/BG 1.png');
+            background-size: cover;       
+            background-repeat: no-repeat;  
+            background-position: top center;
+            filter: grayscale(50%); 
+            opacity: 0.25; 
+            z-index: -999;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="homepage">
 
     <!-- Full-Page Background Image Overlay -->
-    <div class="page-bg-overlay">
-        <img src="Images/BG 1.png" alt="Background Watermark">
-    </div>
+    <div class="page-bg-overlay"></div>
 
     <!-- Background Animation -->
     <div class="background-animation">
@@ -107,25 +113,25 @@
 
     <!-- Main Content -->
     <main id="main-content">
-        <div class="glass-card main-content-box"><!-- 1. DOCTOR ABOUT & HERO (Text Left in Light Box, Image Right) -->
-        <section id="about" class="hero-section">
-            <div class="hero-text-box glass-card" style="text-align: left;">
-                <h2>Dr. Santanu Das</h2>
-                <h3 class="subtitle" style="color: var(--secondary-color); font-weight: bold; font-size: 1.2rem; margin-bottom: 1.5rem;">
-                    Orbit, Ophthalmic Plastic and Reconstructive Surgeon
-                </h3>
-                <p style="margin-bottom: 1rem;">Hello everyone, </p>
-                <p style="margin-bottom: 1rem;"> I am Dr Santanu Das, an internationally trained orbit, ophthalmic plastic and reconstructive surgeon currently based in New Delhi, India.</p>
-                <p style="margin-bottom: 1rem;">I have done my medical studies (MBBS and MS in Ophthalmology) from Kempegowda Institute of Medical Sciences, Bangalore followed by a clinical fellowship in Orbit and Oculoplasty from one of the best eye hospitals in India, Sankara Eye Hospital, Bangalore.</p>
-                <p style="margin-bottom: 2rem;">Later on, to enhance my expertise in advanced oculoplastic and reconstructive procedures I did an international fellowship from Siriraj Hospital Bangkok, a high volume tertiary care centre in Thailand. Having accumulated considerable knowledge and a deep understanding of ophthalmic plastic and reconstructive surgery, my endeavour is to provide the best possible treatment and guidance to my patients through a holistic approach.</p>
-                <button class="animated-btn" onclick="document.getElementById('what-is-oculoplasty').scrollIntoView({behavior: 'smooth'})">Learn More</button>
-            </div>
+    <!-- 1. DOCTOR ABOUT & HERO (Text Left, Image Right) -->
+    <section id="about" class="hero-section">
+       <div class="hero-text-box" style="text-align: left;">
+            <h2>Dr. Santanu Das</h2>
+            <h3 class="subtitle" style="color: var(--secondary-color); font-weight: bold; font-size: 1.2rem; margin-bottom: 1.5rem;">
+                Orbit, Ophthalmic Plastic and Reconstructive Surgeon
+            </h3>
+            <p class="edu-custom-font" style="margin-bottom: 1rem;">Hello everyone, </p>
+            <p class="edu-custom-font" style="margin-bottom: 1rem;"> I am Dr Santanu Das, an internationally trained orbit, ophthalmic plastic and reconstructive surgeon currently based in New Delhi, India.</p>
+            <p class="edu-custom-font" style="margin-bottom: 1rem;">I have done my medical studies (MBBS and MS in Ophthalmology) from Kempegowda Institute of Medical Sciences, Bangalore followed by a clinical fellowship in Orbit and Oculoplasty from one of the best eye hospitals in India, Sankara Eye Hospital, Bangalore.</p>
+            <p class="edu-custom-font" style="margin-bottom: 2rem;">Later on, to enhance my expertise in advanced oculoplastic and reconstructive procedures I did an international fellowship from Siriraj Hospital Bangkok, a high volume tertiary care centre in Thailand. Having accumulated considerable knowledge and a deep understanding of ophthalmic plastic and reconstructive surgery, my endeavour is to provide the best possible treatment and guidance to my patients through a holistic approach.</p>
+            <button class="animated-btn" onclick="document.getElementById('what-is-oculoplasty').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+        </div>
 
             <div class="hero-image-container">
                 <div class="creative-frame">
                     <div class="bg-shape shape-primary"></div>
                     <div class="bg-shape shape-secondary"></div>
-                    <img src="santanu-das.png" alt="Dr. Santanu Das" class="hero-portrait-layered">
+                    <img src="Images/santanu das 2.png" alt="Dr. Santanu Das" class="hero-portrait-layered">
                 </div>
             </div>
         </section>
@@ -156,53 +162,77 @@
 
         <!-- 3. EDUCATIONAL QUALIFICATIONS -->
 
-        <div class="glass-card education-card-box">
-    
-    <!-- Content here -->
+       <!-- Content here -->
       <section id="education-home" style="padding: 2rem 5% 5rem;">
-            <div class="glass-card" style="max-width: 900px; margin: 0 auto;">
+            <div style="max-width: 900px; margin: 0 auto;">
                 <h3 style="text-align: center; border-bottom: none; display: block; margin-bottom: 0.5rem; font-family: 'georgia', sans-serif; font-style: italic;">Educational Qualifications</h3>
                 <div style="border-bottom: 3px solid var(--secondary-color); width: 60px; margin: 0 auto 2.5rem;"></div>
                 
                 <div style="display: flex; flex-direction: column; gap: 2rem;">
-                    
-                    <div class="edu-item edu-custom-font" style="margin-bottom: 0;">
-                        <div>MBBS,</div>
-                        <div style="font-weight: bold; margin-bottom: 0.2rem;">Kempegowda Institute of Medical Sciences,</div>
-                        <div style="font-weight: bold; margin-bottom: 0.2rem;">Bangalore. Rajiv Gandhi University of Health Sciences</div>
-                    </div>
-                    
-                    <div class="edu-item edu-custom-font" style="margin-bottom: 0;">
-                        <div>MS Ophthalmology,</div>
-                        <div style="font-weight: bold; margin-bottom: 0.2rem;">Kempegowda Institute of Medical Sciences,</div>
-                        <div style="font-weight: bold; margin-bottom: 0.2rem;">Bangalore. Rajiv Gandhi University of Health Sciences</div>
-                    </div>
-
-                    <div class="edu-item edu-custom-font" style="margin-bottom: 0;">
-                        <div>Fellowship in Orbit and Oculoplasty</div>
-                        <div style="font-weight: bold; margin-bottom: 0.2rem;">Sankara Eye Hospital, Bangalore</div>
-                    </div>
-                    
-                    <div class="edu-item edu-custom-font" style="margin-bottom: 0;">
-                        <div style="margin-bottom: 0;">International clinical fellowship in Orbit,</div>
-                        <div style="margin-bottom: 0;">Ophthalmic plastic and reconstructive surgery,</div>
-                        <div style="font-weight: bold; margin-bottom: 0.2rem;">Siriraj Hospital , Mahidol University, Bangkok.</div>
-                    </div>
-
+    
+                <div class="edu-item edu-custom-font" style="margin-bottom: 0;">
+                    <div>MBBS,</div>
+                    <div style="font-weight: bold; margin-bottom: 0.2rem;">Kempegowda Institute of Medical Sciences,</div>
+                    <div style="font-weight: bold; margin-bottom: 0.2rem;">Bangalore, Rajiv Gandhi University of Health Sciences <img src="https://flagcdn.com/24x18/in.png" alt="India Flag" style="vertical-align: middle; width: 20px; height: 15px; margin-left: 5px;"></div>
                 </div>
+                
+                <div class="edu-item edu-custom-font" style="margin-bottom: 0;">
+                    <div>MS Ophthalmology,</div>
+                    <div style="font-weight: bold; margin-bottom: 0.2rem;">Kempegowda Institute of Medical Sciences,</div>
+                    <div style="font-weight: bold; margin-bottom: 0.2rem;">Bangalore, Rajiv Gandhi University of Health Sciences <img src="https://flagcdn.com/24x18/in.png" alt="India Flag" style="vertical-align: middle; width: 20px; height: 15px; margin-left: 5px;"></div>
+                </div>
+
+                <div class="edu-item edu-custom-font" style="margin-bottom: 0;">
+                    <div>Fellowship in Orbit and Oculoplasty</div>
+                    <div style="font-weight: bold; margin-bottom: 0.2rem;">Sankara Eye Hospital, Bangalore <img src="https://flagcdn.com/24x18/in.png" alt="India Flag" style="vertical-align: middle; width: 20px; height: 15px; margin-left: 5px;"></div>
+                </div>
+                
+                <div class="edu-item edu-custom-font" style="margin-bottom: 0;">
+                    <div style="margin-bottom: 0;">International clinical fellowship in Orbit,</div>
+                    <div style="margin-bottom: 0;">Ophthalmic plastic and reconstructive surgery,</div>
+                    <div style="font-weight: bold; margin-bottom: 0.2rem;">Siriraj Hospital, Mahidol University, Bangkok <img src="https://flagcdn.com/24x18/th.png" alt="Thailand Flag" style="vertical-align: middle; width: 20px; height: 15px; margin-left: 5px;"></div>
+                </div>
+
+            </div>
             </div>
         </section>
 </div>
-       
+        
 
     </main>
 
-    <!-- FOOTER & COPYRIGHT -->
-    <footer class="main-footer">
-        <p>&copy; 2026 Dr. Santanu Das. All rights reserved.</p>
-        <p class="creator-credits">Created by Aniket Sarkar</p>
-    </footer>
+   <!-- FOOTER & COPYRIGHT -->
+<footer class="main-footer">
+    <p>&copy; 2026 Dr. Santanu Das. All rights reserved.</p>
+    <p>
+        <span id="disclaimer-link" class="footer-legal-link">Disclaimer & Copyright</span>
+    </p>
+    <p class="creator-credits">Created by Aniket Sarkar</p>
+</footer>
 
-    <script src="script.js"></script>
+<!-- DISCLAIMER & COPYRIGHT MODAL POPUP -->
+<div id="legalModal" class="legal-modal">
+    <div class="legal-modal-content">
+        <span class="legal-close" id="legalClose">&times;</span>
+        <h2>Disclaimer & Copyright Information</h2>
+        
+        <h3>Website Disclaimer</h3>
+        <p>The content provided on this website—including all text, graphics, clinical images, and materials—is intended strictly for educational and informational purposes only and should not be construed as professional medical advice, diagnosis, or treatment.</p>
+        <ul>
+            <li><strong>Not Medical Advice:</strong> The information presented on this site is not a substitute for professional medical consultation, diagnosis, or treatment by a qualified healthcare provider.</li>
+            <li><strong>No Doctor-Patient Relationship:</strong> Accessing, browsing, or interacting with the information on this website does not establish a physician-patient relationship between you and Dr. Santanu Das.</li>
+            <li><strong>Professional Consultation:</strong> Always seek the direct advice of your physician, ophthalmologist, or qualified medical specialist regarding any questions or concerns you may have about a medical condition or procedural option.</li>
+        </ul>
+
+        <h3 style="margin-top: 1.5rem;">Copyright Notice</h3>
+        <p>&copy; 2026 Dr. Santanu Das. All rights reserved.</p>
+        <ul>
+            <li><strong>Intellectual Property Rights:</strong> All content, website design, text, layout, clinical imagery, and visual media featured on this site are the exclusive property of Dr. Santanu Das unless otherwise stated.</li>
+            <li><strong>Restricted Use:</strong> No part of this website, including its text, design elements, or medical case images, may be reproduced, distributed, modified, or transmitted in any form without prior express written permission.</li>
+            <li><strong>Attribution:</strong> Web development and architecture created by Aniket Sarkar.</li>
+        </ul>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
