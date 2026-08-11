@@ -86,14 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateCarousel();
             });
         });
-
-
-        
     }
-});
 
-// Automatic Image Carousel Rotation
-document.addEventListener("DOMContentLoaded", () => {
+    // 4. Automatic Image Carousel Rotation
     const carousels = document.querySelectorAll("[data-carousel]");
     
     carousels.forEach(carousel => {
@@ -107,4 +102,34 @@ document.addEventListener("DOMContentLoaded", () => {
             slides[currentSlide].classList.add("active");
         }, 4000); // Changes image every 4 seconds
     });
+
+    // 5. Disclaimer & Copyright Modal Script (Safeguarded)
+    const legalModal = document.getElementById('legalModal');
+    const legalLink = document.getElementById('disclaimer-link');
+    const legalClose = document.getElementById('legalClose');
+
+    if (legalModal && legalLink) {
+        legalLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            legalModal.style.display = 'flex';
+        });
+
+        if (legalClose) {
+            legalClose.addEventListener('click', () => {
+                legalModal.style.display = 'none';
+            });
+        }
+
+        legalModal.addEventListener('click', (e) => {
+            if (e.target === legalModal) {
+                legalModal.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && legalModal.style.display === 'flex') {
+                legalModal.style.display = 'none';
+            }
+        });
+    }
 });
