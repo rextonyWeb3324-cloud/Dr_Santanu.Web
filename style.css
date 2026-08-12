@@ -35,6 +35,10 @@ body {
     display: flex; 
     flex-direction: column; 
     min-height: 100vh; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /* =========================================
@@ -258,6 +262,13 @@ main {
 .info-card h3 { color: var(--secondary-color); margin-bottom: 1rem; font-size: 1.4rem; transition: color 0.3s; }
 .info-card h4 { color: var(--secondary-color); margin-bottom: 0.75rem; font-size: 1.3rem; transition: color 0.3s; }
 .info-card p { font-size: 1.1rem; line-height: 1.6; transition: color 0.3s; }
+
+/* Image Protection Safeguards */
+img {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
 
 /* =========================================
    PREMIUM BOXED FOOTER & COPYRIGHT
