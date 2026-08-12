@@ -132,4 +132,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 6. Content Protection (Disable Right-Click, DevTools Shortcuts, and Dragging)
+    document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (
+            e.key === 'F12' ||
+            (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+            (e.ctrlKey && (e.key === 'U' || e.key === 's' || e.key === 'S'))
+        ) {
+            e.preventDefault();
+        }
+    });
+
+    document.addEventListener('dragstart', (e) => {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
+    });
 });
